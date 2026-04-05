@@ -5,7 +5,7 @@
  */
 
 import { Box, Text } from 'ink';
-import { theme, getUIStyle } from '../semantic-colors.js';
+import { fixedColors, fixedSuggestionsStyle } from '../fixed-styles.js';
 import { PrepareLabel, MAX_WIDTH } from './PrepareLabel.js';
 import { CommandKind } from '../commands/types.js';
 import { Colors } from '../colors.js';
@@ -40,16 +40,18 @@ export function SuggestionsDisplay({
   mode,
   expandedIndex,
 }: SuggestionsDisplayProps) {
-  const uiStyle = getUIStyle('suggestions');
-  const selectionColor = uiStyle.selectionColor || theme.text.accent;
-  const descriptionColor = uiStyle.descriptionColor || theme.text.secondary;
-  const matchBackground = uiStyle.matchBackground;
-  const matchColor = uiStyle.matchColor;
+  // Use fixed colors (independent of theme)
+  const selectionColor = fixedSuggestionsStyle.selectionColor;
+  const descriptionColor = fixedSuggestionsStyle.descriptionColor;
+  const matchBackground = undefined;
+  const matchColor = undefined;
 
   if (isLoading) {
     return (
       <Box width={width}>
-        <Text color={uiStyle.loadingColor}>Loading suggestions...</Text>
+        <Text color={fixedSuggestionsStyle.loadingColor}>
+          Loading suggestions...
+        </Text>
       </Box>
     );
   }
@@ -77,13 +79,17 @@ export function SuggestionsDisplay({
 
   return (
     <Box flexDirection="column" width={width}>
-      {scrollOffset > 0 && <Text color={uiStyle.arrowColor}>▲</Text>}
+      {scrollOffset > 0 && (
+        <Text color={fixedSuggestionsStyle.arrowColor}>▲</Text>
+      )}
 
       {visibleSuggestions.map((suggestion, index) => {
         const originalIndex = startIndex + index;
         const isActive = originalIndex === activeIndex;
         const isExpanded = originalIndex === expandedIndex;
-        const textColor = isActive ? selectionColor : theme.text.secondary;
+        const textColor = isActive
+          ? selectionColor
+          : fixedColors.suggestionText;
         const displayLabel = suggestion.label ?? suggestion.value;
         const isLong = displayLabel.length >= MAX_WIDTH;
         const labelElement = (
@@ -129,7 +135,7 @@ export function SuggestionsDisplay({
         );
       })}
       {endIndex < suggestions.length && (
-        <Text color={uiStyle.arrowColor}>▼</Text>
+        <Text color={fixedSuggestionsStyle.arrowColor}>▼</Text>
       )}
       {suggestions.length > MAX_SUGGESTIONS_TO_SHOW && (
         <Text color="gray">

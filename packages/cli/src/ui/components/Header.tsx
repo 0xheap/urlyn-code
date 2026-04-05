@@ -8,10 +8,10 @@ import type React from 'react';
 import { Box, Text } from 'ink';
 import Gradient from 'ink-gradient';
 import { shortenPath, tildeifyPath } from '@qwen-code/qwen-code-core';
-import { theme } from '../semantic-colors.js';
 import { shortAsciiLogo } from './AsciiArt.js';
 import { getAsciiArtWidth, getCachedStringWidth } from '../utils/textUtils.js';
 import { useTerminalSize } from '../hooks/useTerminalSize.js';
+import { fixedColors } from '../fixed-styles.js';
 
 /**
  * Auth display type for the Header component.
@@ -98,12 +98,8 @@ export const Header: React.FC<HeaderProps> = ({
         ? shortenedPath.slice(0, maxPathLength)
         : shortenedPath;
 
-  // Use theme gradient colors if available, otherwise use text colors (excluding primary)
-  const gradientColors = theme.ui.gradient || [
-    theme.text.secondary,
-    theme.text.link,
-    theme.text.accent,
-  ];
+  // Use fixed gradient colors (independent of theme)
+  const gradientColors = fixedColors.gradient;
 
   return (
     <Box
@@ -129,29 +125,29 @@ export const Header: React.FC<HeaderProps> = ({
       <Box
         flexDirection="column"
         borderStyle="single"
-        borderColor={theme.border.default}
+        borderColor={fixedColors.headerBorder}
         paddingX={infoPanelPaddingX}
         flexGrow={showLogo ? 0 : 1}
         width={showLogo ? availableInfoPanelWidth : undefined}
       >
         {/* Title line: >_ Qwen Code (v{version}) */}
         <Text>
-          <Text bold color={theme.text.accent}>
+          <Text bold color={fixedColors.headerTitle}>
             &gt;_ Urlyn Code
           </Text>
-          <Text color={theme.text.secondary}> (v{version})</Text>
+          <Text color={fixedColors.headerText}> (v{version})</Text>
         </Text>
         {/* Empty line for spacing */}
         <Text> </Text>
         {/* Auth and Model line */}
         <Text>
-          <Text color={theme.text.secondary}>{authModelText}</Text>
+          <Text color={fixedColors.headerText}>{authModelText}</Text>
           {showModelHint && (
-            <Text color={theme.text.secondary}>{modelHintText}</Text>
+            <Text color={fixedColors.headerText}>{modelHintText}</Text>
           )}
         </Text>
         {/* Directory line */}
-        <Text color={theme.text.secondary}>{displayPath}</Text>
+        <Text color={fixedColors.headerText}>{displayPath}</Text>
       </Box>
     </Box>
   );

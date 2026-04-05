@@ -8,7 +8,8 @@ import type React from 'react';
 import { useCallback, useEffect, useMemo, useState, useRef } from 'react';
 import { Box, Text } from 'ink';
 import { SuggestionsDisplay, MAX_WIDTH } from './SuggestionsDisplay.js';
-import { theme, getUIStyle } from '../semantic-colors.js';
+import { theme } from '../semantic-colors.js';
+import { fixedColors } from '../fixed-styles.js';
 import { useInputHistory } from '../hooks/useInputHistory.js';
 import type { TextBuffer } from './shared/text-buffer.js';
 import { logicalPosToOffset } from './shared/text-buffer.js';
@@ -1152,15 +1153,15 @@ export const InputPrompt: React.FC<InputPromptProps> = ({
     statusText = t('Accepting edits');
   }
 
-  const uiStyle = getUIStyle('inputPanel');
+  // Use fixed border colors (independent of theme)
   const borderColor =
     isShellFocused && !isEmbeddedShellFocused && !agentTabBarFocused
-      ? (statusColor ?? (uiStyle.borderColorFocused || theme.border.focused))
-      : uiStyle.borderColorDefault || theme.border.default;
+      ? (statusColor ?? fixedColors.inputBorderFocused)
+      : fixedColors.inputBorderDefault;
 
   const prefixNode = (
     <Text
-      color={statusColor ?? theme.text.accent}
+      color={statusColor ?? fixedColors.promptPrefix}
       aria-label={statusText || undefined}
     >
       {shellModeActive ? (
@@ -1172,7 +1173,7 @@ export const InputPrompt: React.FC<InputPromptProps> = ({
           '!'
         )
       ) : commandSearchActive ? (
-        <Text color={theme.text.accent}>(r:) </Text>
+        <Text color={fixedColors.promptPrefix}>(r:) </Text>
       ) : showYoloStyling ? (
         '*'
       ) : (
