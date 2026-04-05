@@ -8,7 +8,7 @@ import type React from 'react';
 import { useCallback, useEffect, useMemo, useState, useRef } from 'react';
 import { Box, Text } from 'ink';
 import { SuggestionsDisplay, MAX_WIDTH } from './SuggestionsDisplay.js';
-import { theme } from '../semantic-colors.js';
+import { theme, getUIStyle } from '../semantic-colors.js';
 import { useInputHistory } from '../hooks/useInputHistory.js';
 import type { TextBuffer } from './shared/text-buffer.js';
 import { logicalPosToOffset } from './shared/text-buffer.js';
@@ -1152,10 +1152,11 @@ export const InputPrompt: React.FC<InputPromptProps> = ({
     statusText = t('Accepting edits');
   }
 
+  const uiStyle = getUIStyle('inputPanel');
   const borderColor =
     isShellFocused && !isEmbeddedShellFocused && !agentTabBarFocused
-      ? (statusColor ?? theme.border.focused)
-      : theme.border.default;
+      ? (statusColor ?? (uiStyle.borderColorFocused || theme.border.focused))
+      : uiStyle.borderColorDefault || theme.border.default;
 
   const prefixNode = (
     <Text

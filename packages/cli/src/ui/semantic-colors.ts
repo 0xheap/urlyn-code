@@ -5,7 +5,7 @@
  */
 
 import { themeManager } from './themes/theme-manager.js';
-import type { SemanticColors } from './themes/semantic-tokens.js';
+import type { SemanticColors, UIStyles } from './themes/semantic-tokens.js';
 
 export const theme: SemanticColors = {
   get text() {
@@ -23,4 +23,18 @@ export const theme: SemanticColors = {
   get status() {
     return themeManager.getSemanticColors().status;
   },
+  get uiStyles() {
+    return themeManager.getSemanticColors().uiStyles;
+  },
 };
+
+/**
+ * Gets the UI styles for a specific category.
+ * This provides a convenient way to access UI style properties without
+ * dealing with the full UIStyles interface.
+ */
+export function getUIStyle<K extends keyof UIStyles>(category: K): UIStyles[K] {
+  // Note: uiStyles is guaranteed to exist in practice (defaults are provided)
+  // TypeScript types don't reflect this, so we use non-null assertion
+  return theme.uiStyles![category];
+}

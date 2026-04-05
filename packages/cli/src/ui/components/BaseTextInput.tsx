@@ -28,7 +28,7 @@ import type { Key } from '../hooks/useKeypress.js';
 import { useKeypress } from '../hooks/useKeypress.js';
 import { keyMatchers, Command } from '../keyMatchers.js';
 import { cpSlice, cpLen } from '../utils/textUtils.js';
-import { theme } from '../semantic-colors.js';
+import { theme, getUIStyle } from '../semantic-colors.js';
 
 // ─── Types ──────────────────────────────────────────────────
 
@@ -235,16 +235,18 @@ export const BaseTextInput: React.FC<BaseTextInputProps> = ({
   const [cursorVisualRow, cursorVisualCol] = buffer.visualCursor;
   const scrollVisualRow = buffer.visualScrollRow;
 
-  const resolvedBorderColor = borderColor ?? theme.border.focused;
+  const resolvedBorderColor =
+    borderColor ?? (isActive ? theme.border.focused : theme.border.default);
   const resolvedPrefix = prefix ?? (
     <Text color={theme.text.accent}>{'> '}</Text>
   );
+  const uiStyle = getUIStyle('inputPanel');
 
   return (
     <Box
-      borderStyle="single"
-      borderTop={true}
-      borderBottom={true}
+      borderStyle={uiStyle.borderStyle}
+      borderTop={uiStyle.showTopBorder ? true : undefined}
+      borderBottom={uiStyle.showBottomBorder ? true : undefined}
       borderLeft={false}
       borderRight={false}
       borderColor={resolvedBorderColor}

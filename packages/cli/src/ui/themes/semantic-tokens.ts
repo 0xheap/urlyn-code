@@ -4,7 +4,85 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { lightTheme, darkTheme, ansiTheme } from './theme.js';
+import { type BoxProps } from 'ink';
+import { lightTheme, darkTheme, ansiTheme , defaultUIStyles } from './theme.js';
+
+export interface UIStyles {
+  /**
+   * Input panel styling
+   */
+  inputPanel: {
+    /** Border style: 'single', 'double', 'round', 'bold', or 'none' */
+    borderStyle: NonNullable<BoxProps['borderStyle']>;
+    /** Border color when focused */
+    borderColorFocused: string;
+    /** Border color when not focused */
+    borderColorDefault: string;
+    /** Padding inside the input panel */
+    paddingX: number;
+    paddingY: number;
+    /** Show top border */
+    showTopBorder: boolean;
+    /** Show bottom border */
+    showBottomBorder: boolean;
+  };
+
+  /**
+   * User input styling
+   */
+  userInput: {
+    /** Cursor character (displayed when showing cursor) */
+    cursorChar: string;
+    /** Cursor background color (inverse of foreground by default) */
+    cursorBackground?: string;
+    /** Prompt prefix character(s) */
+    promptPrefix: string;
+    /** Prompt prefix color */
+    promptPrefixColor: string;
+    /** Placeholder text color */
+    placeholderColor: string;
+    /** Placeholder first character inverse style */
+    placeholderInverse: boolean;
+  };
+
+  /**
+   * Suggestions/command list styling
+   */
+  suggestions: {
+    /** Background color for selected item */
+    selectionBackground?: string;
+    /** Text color for selected item */
+    selectionColor: string;
+    /** Background color for matched text within selection */
+    matchBackground?: string;
+    /** Text color for matched text within selection */
+    matchColor?: string;
+    /** Description text color */
+    descriptionColor: string;
+    /** Arrow indicator color */
+    arrowColor: string;
+    /** Loading indicator color */
+    loadingColor: string;
+  };
+
+  /**
+   * Help dialog styling
+   */
+  helpDialog: {
+    /** Section header color (e.g., "Basics:", "Commands:") */
+    sectionHeaderColor: string;
+    /** Command label color (e.g., "/help", "@file") */
+    commandLabelColor: string;
+    /** Command description color */
+    commandDescriptionColor: string;
+    /** Keyboard shortcut label color */
+    shortcutLabelColor: string;
+    /** Border style for help dialog */
+    borderStyle: NonNullable<BoxProps['borderStyle']>;
+    /** Show command kind indicators (e.g., [MCP]) */
+    showCommandKind: boolean;
+  };
+}
 
 export interface SemanticColors {
   text: {
@@ -38,6 +116,8 @@ export interface SemanticColors {
     errorDim: string;
     warningDim: string;
   };
+  // New: UI styles for consistent panel/input/command list appearance
+  uiStyles: UIStyles;
 }
 
 export const lightSemanticColors: SemanticColors = {
@@ -71,6 +151,7 @@ export const lightSemanticColors: SemanticColors = {
     errorDim: lightTheme.AccentRedDim,
     warningDim: lightTheme.AccentYellowDim,
   },
+  uiStyles: defaultUIStyles,
 };
 
 export const darkSemanticColors: SemanticColors = {
@@ -104,6 +185,7 @@ export const darkSemanticColors: SemanticColors = {
     errorDim: darkTheme.AccentRedDim,
     warningDim: darkTheme.AccentYellowDim,
   },
+  uiStyles: defaultUIStyles,
 };
 
 export const ansiSemanticColors: SemanticColors = {
@@ -137,4 +219,5 @@ export const ansiSemanticColors: SemanticColors = {
     errorDim: ansiTheme.AccentRedDim,
     warningDim: ansiTheme.AccentYellowDim,
   },
+  uiStyles: defaultUIStyles,
 };

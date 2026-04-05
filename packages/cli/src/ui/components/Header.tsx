@@ -137,7 +137,7 @@ export const Header: React.FC<HeaderProps> = ({
         {/* Title line: >_ Qwen Code (v{version}) */}
         <Text>
           <Text bold color={theme.text.accent}>
-            &gt;_ Qwen Code
+            &gt;_ Urlyn Code
           </Text>
           <Text color={theme.text.secondary}> (v{version})</Text>
         </Text>

@@ -16,6 +16,8 @@ export interface PrepareLabelProps {
   userInput: string;
   textColor: string;
   isExpanded?: boolean;
+  matchBackground?: string;
+  matchColor?: string;
 }
 
 const _PrepareLabel: React.FC<PrepareLabelProps> = ({
@@ -24,6 +26,8 @@ const _PrepareLabel: React.FC<PrepareLabelProps> = ({
   userInput,
   textColor,
   isExpanded = false,
+  matchBackground,
+  matchColor,
 }) => {
   const hasMatch =
     matchedIndex !== undefined &&
@@ -101,8 +105,8 @@ const _PrepareLabel: React.FC<PrepareLabelProps> = ({
         ? match.split(/(\s+)/).map((part, index) => (
             <Text
               key={`match-${index}`}
-              color={theme.background.primary}
-              backgroundColor={theme.text.primary}
+              color={matchColor ?? theme.background.primary}
+              backgroundColor={matchBackground ?? theme.text.primary}
             >
               {part}
             </Text>

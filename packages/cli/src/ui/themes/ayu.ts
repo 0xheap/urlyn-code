@@ -12,7 +12,7 @@ const ayuDarkColors: ColorsTheme = {
   Foreground: '#aeaca6',
   LightBlue: '#59C2FF',
   AccentBlue: '#39BAE6',
-  AccentPurple: '#D2A6FF',
+  AccentPurple: '#0e9594',
   AccentCyan: '#95E6CB',
   AccentGreen: '#AAD94C',
   AccentYellow: '#FFB454',

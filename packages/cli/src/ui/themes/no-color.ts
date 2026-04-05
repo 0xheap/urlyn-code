@@ -5,7 +5,7 @@
  */
 
 import type { ColorsTheme } from './theme.js';
-import { Theme } from './theme.js';
+import { Theme, defaultUIStyles } from './theme.js';
 import type { SemanticColors } from './semantic-tokens.js';
 
 const noColorColorsTheme: ColorsTheme = {
@@ -58,6 +58,7 @@ const noColorSemanticColors: SemanticColors = {
     errorDim: '',
     warningDim: '',
   },
+  uiStyles: defaultUIStyles,
 };
 
 export const NoColorTheme: Theme = new Theme(

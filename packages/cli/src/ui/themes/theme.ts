@@ -5,7 +5,7 @@
  */
 
 import type { CSSProperties } from 'react';
-import type { SemanticColors } from './semantic-tokens.js';
+import type { SemanticColors, UIStyles } from './semantic-tokens.js';
 import { resolveColor } from './color-utils.js';
 
 export type ThemeType = 'light' | 'dark' | 'ansi' | 'custom';
@@ -65,6 +65,8 @@ export interface CustomTheme {
     errorDim?: string;
     warningDim?: string;
   };
+  // New: UI styles for consistent panel/input/command list appearance
+  uiStyles?: UIStyles;
 
   // Legacy properties (all optional)
   Background?: string;
@@ -91,7 +93,7 @@ export const lightTheme: ColorsTheme = {
   Foreground: '',
   LightBlue: '#89BDCD',
   AccentBlue: '#3B82F6',
-  AccentPurple: '#8B5CF6',
+  AccentPurple: '#0e9594',
   AccentCyan: '#06B6D4',
   AccentGreen: '#3CA84B',
   AccentYellow: '#D5A40A',
@@ -111,7 +113,7 @@ export const darkTheme: ColorsTheme = {
   Foreground: '',
   LightBlue: '#ADD8E6',
   AccentBlue: '#89B4FA',
-  AccentPurple: '#CBA6F7',
+  AccentPurple: '#0e9594',
   AccentCyan: '#89DCEB',
   AccentGreen: '#A6E3A1',
   AccentYellow: '#F9E2AF',
@@ -144,6 +146,43 @@ export const ansiTheme: ColorsTheme = {
   Gray: 'gray',
 };
 
+// Default UI styles for consistent panel/input/command list appearance
+export const defaultUIStyles: UIStyles = {
+  inputPanel: {
+    borderStyle: 'single',
+    borderColorFocused: '', // Will use theme's AccentBlue by default
+    borderColorDefault: '', // Will use theme's Gray by default
+    paddingX: 1,
+    paddingY: 0,
+    showTopBorder: true,
+    showBottomBorder: true,
+  },
+  userInput: {
+    cursorChar: ' ',
+    promptPrefix: '> ',
+    promptPrefixColor: '',
+    placeholderColor: '',
+    placeholderInverse: true,
+  },
+  suggestions: {
+    selectionBackground: '',
+    selectionColor: '',
+    matchBackground: '',
+    matchColor: '',
+    descriptionColor: '',
+    arrowColor: 'gray',
+    loadingColor: 'gray',
+  },
+  helpDialog: {
+    sectionHeaderColor: '',
+    commandLabelColor: '',
+    commandDescriptionColor: '',
+    shortcutLabelColor: '',
+    borderStyle: 'round',
+    showCommandKind: true,
+  },
+};
+
 export class Theme {
   /**
    * The default foreground color for text when no specific highlight rule applies.
@@ -169,7 +208,8 @@ export class Theme {
     readonly colors: ColorsTheme,
     semanticColors?: SemanticColors,
   ) {
-    this.semanticColors = semanticColors ?? {
+    // Create base semantic colors with defaults for missing properties
+    const baseSemanticColors = semanticColors ?? {
       text: {
         primary: this.colors.Foreground,
         secondary: this.colors.Gray,
@@ -200,6 +240,17 @@ export class Theme {
         errorDim: this.colors.AccentRedDim,
         warningDim: this.colors.AccentYellowDim,
       },
+      // New: UI styles for consistent panel/input/command list appearance
+      uiStyles: defaultUIStyles,
+    };
+
+    this.semanticColors = {
+      ...baseSemanticColors,
+      // Allow semanticColors override to extend uiStyles if provided
+      uiStyles:
+        semanticColors?.uiStyles !== undefined
+          ? semanticColors.uiStyles
+          : defaultUIStyles,
     };
     this._colorMap = Object.freeze(this._buildColorMap(rawMappings)); // Build and freeze the map
 
@@ -460,6 +511,7 @@ export function createCustomTheme(customTheme: CustomTheme): Theme {
       errorDim: customTheme.status?.errorDim ?? colors.AccentRedDim,
       warningDim: customTheme.status?.warningDim ?? colors.AccentYellowDim,
     },
+    uiStyles: (customTheme.uiStyles as UIStyles) ?? defaultUIStyles,
   };
 
   return new Theme(
