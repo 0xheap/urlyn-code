@@ -32,15 +32,15 @@ export const fixedColors = {
   inputBorderFocused: '#2a9d8f', // Teal when focused
   inputBorderDefault: '#6C7086', // Gray when not focused
 
-  // Suggestions menu
-  suggestionSelected: '#89B4FA', // Light blue for selected item
+  // Prompt prefix (same as ASCII logo gradient)
+  promptPrefix: '#2a9d8f', // Teal (matches fixedColors.gradient)
+
+  // Suggestions menu (same as ASCII logo gradient)
+  suggestionSelected: '#2a9d8f', // Teal (matches fixedColors.gradient)
   suggestionText: '#6C7086', // Gray for unselected items
   suggestionDescription: '#6C7086', // Gray for descriptions
   suggestionArrow: 'gray', // Arrow indicators
   suggestionLoading: 'gray', // Loading text
-
-  // Prompt prefix
-  promptPrefix: '#89B4FA', // Light blue for ">" prompt
 } as const;
 
 /**
