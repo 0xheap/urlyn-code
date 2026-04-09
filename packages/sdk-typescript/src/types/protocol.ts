@@ -247,7 +247,9 @@ export type AuthType =
   | 'deepseek'
   | 'mistral'
   | 'together-ai'
-  | 'fireworks';
+  | 'fireworks'
+  | 'openrouter'
+  | 'inception';
 
 /**
  * TODO: Align with `ToolCallConfirmationDetails`

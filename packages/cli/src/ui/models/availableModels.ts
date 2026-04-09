@@ -148,6 +148,32 @@ export function getFireworksAvailableModelFromEnv(): AvailableModel | null {
     : null;
 }
 
+export function getOpenRouterAvailableModelFromEnv(): AvailableModel | null {
+  const id = process.env['OPENROUTER_MODEL']?.trim();
+  return id
+    ? {
+        id,
+        label: id,
+        get description() {
+          return t('Configured via OPENROUTER_MODEL environment variable');
+        },
+      }
+    : null;
+}
+
+export function getInceptionAvailableModelFromEnv(): AvailableModel | null {
+  const id = process.env['INCEPTION_MODEL']?.trim();
+  return id
+    ? {
+        id,
+        label: id,
+        get description() {
+          return t('Configured via INCEPTION_MODEL environment variable');
+        },
+      }
+    : null;
+}
+
 /**
  * Convert core AvailableModel to CLI AvailableModel format
  */
@@ -224,6 +250,14 @@ export function getAvailableModelsForAuthType(
     case AuthType.USE_FIREWORKS: {
       const fireworksModel = getFireworksAvailableModelFromEnv();
       return fireworksModel ? [fireworksModel] : [];
+    }
+    case AuthType.USE_OPENROUTER: {
+      const openrouterModel = getOpenRouterAvailableModelFromEnv();
+      return openrouterModel ? [openrouterModel] : [];
+    }
+    case AuthType.USE_INCEPTION: {
+      const inceptionModel = getInceptionAvailableModelFromEnv();
+      return inceptionModel ? [inceptionModel] : [];
     }
     default:
       return [];

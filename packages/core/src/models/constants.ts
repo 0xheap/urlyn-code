@@ -117,6 +117,16 @@ export const AUTH_ENV_MAPPINGS = {
     baseUrl: ['FIREWORKS_BASE_URL'],
     model: ['FIREWORKS_MODEL'],
   },
+  openrouter: {
+    apiKey: ['OPENROUTER_API_KEY'],
+    baseUrl: ['OPENROUTER_BASE_URL'],
+    model: ['OPENROUTER_MODEL'],
+  },
+  inception: {
+    apiKey: ['INCEPTION_API_KEY'],
+    baseUrl: ['INCEPTION_BASE_URL'],
+    model: ['INCEPTION_MODEL'],
+  },
 } as const satisfies Record<AuthType, AuthEnvMapping>;
 
 export const DEFAULT_MODELS = {
@@ -128,6 +138,8 @@ export const DEFAULT_MODELS = {
   mistral: 'mistral-tiny',
   'together-ai': 'mistralai/Mixtral-8x7B-Instruct-v0.1',
   fireworks: 'accounts/fireworks/models/llama-v3-70b-instruct',
+  openrouter: 'meta-llama/llama-3-8b-instruct',
+  inception: 'mercury-2',
 } as Partial<Record<AuthType, string>>;
 
 /**

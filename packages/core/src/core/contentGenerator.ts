@@ -64,6 +64,8 @@ export enum AuthType {
   USE_MISTRAL = 'mistral',
   USE_TOGETHER_AI = 'together-ai',
   USE_FIREWORKS = 'fireworks',
+  USE_OPENROUTER = 'openrouter',
+  USE_INCEPTION = 'inception',
 }
 
 /**
@@ -323,7 +325,9 @@ export async function createContentGenerator(
     authType === AuthType.USE_DEEPSEEK ||
     authType === AuthType.USE_MISTRAL ||
     authType === AuthType.USE_TOGETHER_AI ||
-    authType === AuthType.USE_FIREWORKS
+    authType === AuthType.USE_FIREWORKS ||
+    authType === AuthType.USE_OPENROUTER ||
+    authType === AuthType.USE_INCEPTION
   ) {
     const { createOpenAIContentGenerator } = await import(
       './openaiContentGenerator/index.js'

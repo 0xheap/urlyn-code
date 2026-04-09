@@ -172,6 +172,8 @@ export const QueryOptionsSchema = z
         'mistral',
         'together-ai',
         'fireworks',
+        'openrouter',
+        'inception',
       ])
       .optional(),
     agents: z
