@@ -5,7 +5,7 @@
  */
 
 import { type BoxProps } from 'ink';
-import { lightTheme, darkTheme, ansiTheme , defaultUIStyles } from './theme.js';
+import { lightTheme, darkTheme, ansiTheme, defaultUIStyles } from './theme.js';
 
 export interface UIStyles {
   /**

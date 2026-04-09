@@ -70,6 +70,84 @@ export function getAnthropicAvailableModelFromEnv(): AvailableModel | null {
     : null;
 }
 
+export function getOllamaAvailableModelFromEnv(): AvailableModel | null {
+  const id = process.env['OLLAMA_MODEL']?.trim();
+  return id
+    ? {
+        id,
+        label: id,
+        get description() {
+          return t('Configured via OLLAMA_MODEL environment variable');
+        },
+      }
+    : null;
+}
+
+export function getGroqAvailableModelFromEnv(): AvailableModel | null {
+  const id = process.env['GROQ_MODEL']?.trim();
+  return id
+    ? {
+        id,
+        label: id,
+        get description() {
+          return t('Configured via GROQ_MODEL environment variable');
+        },
+      }
+    : null;
+}
+
+export function getDeepSeekAvailableModelFromEnv(): AvailableModel | null {
+  const id = process.env['DEEPSEEK_MODEL']?.trim();
+  return id
+    ? {
+        id,
+        label: id,
+        get description() {
+          return t('Configured via DEEPSEEK_MODEL environment variable');
+        },
+      }
+    : null;
+}
+
+export function getMistralAvailableModelFromEnv(): AvailableModel | null {
+  const id = process.env['MISTRAL_MODEL']?.trim();
+  return id
+    ? {
+        id,
+        label: id,
+        get description() {
+          return t('Configured via MISTRAL_MODEL environment variable');
+        },
+      }
+    : null;
+}
+
+export function getTogetherAIAvailableModelFromEnv(): AvailableModel | null {
+  const id = process.env['TOGETHER_MODEL']?.trim();
+  return id
+    ? {
+        id,
+        label: id,
+        get description() {
+          return t('Configured via TOGETHER_MODEL environment variable');
+        },
+      }
+    : null;
+}
+
+export function getFireworksAvailableModelFromEnv(): AvailableModel | null {
+  const id = process.env['FIREWORKS_MODEL']?.trim();
+  return id
+    ? {
+        id,
+        label: id,
+        get description() {
+          return t('Configured via FIREWORKS_MODEL environment variable');
+        },
+      }
+    : null;
+}
+
 /**
  * Convert core AvailableModel to CLI AvailableModel format
  */
@@ -122,6 +200,30 @@ export function getAvailableModelsForAuthType(
     case AuthType.USE_ANTHROPIC: {
       const anthropicModel = getAnthropicAvailableModelFromEnv();
       return anthropicModel ? [anthropicModel] : [];
+    }
+    case AuthType.USE_OLLAMA: {
+      const ollamaModel = getOllamaAvailableModelFromEnv();
+      return ollamaModel ? [ollamaModel] : [];
+    }
+    case AuthType.USE_GROQ: {
+      const groqModel = getGroqAvailableModelFromEnv();
+      return groqModel ? [groqModel] : [];
+    }
+    case AuthType.USE_DEEPSEEK: {
+      const deepseekModel = getDeepSeekAvailableModelFromEnv();
+      return deepseekModel ? [deepseekModel] : [];
+    }
+    case AuthType.USE_MISTRAL: {
+      const mistralModel = getMistralAvailableModelFromEnv();
+      return mistralModel ? [mistralModel] : [];
+    }
+    case AuthType.USE_TOGETHER_AI: {
+      const togetherModel = getTogetherAIAvailableModelFromEnv();
+      return togetherModel ? [togetherModel] : [];
+    }
+    case AuthType.USE_FIREWORKS: {
+      const fireworksModel = getFireworksAvailableModelFromEnv();
+      return fireworksModel ? [fireworksModel] : [];
     }
     default:
       return [];

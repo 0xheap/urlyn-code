@@ -112,7 +112,7 @@ export const Header: React.FC<HeaderProps> = ({
       {showLogo && (
         <>
           <Box flexShrink={0}>
-            <Gradient colors={gradientColors}>
+            <Gradient colors={[...gradientColors]}>
               <Text>{displayLogo}</Text>
             </Gradient>
           </Box>

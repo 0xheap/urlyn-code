@@ -160,7 +160,19 @@ export const QueryOptionsSchema = z
     excludeTools: z.array(z.string()).optional(),
     allowedTools: z.array(z.string()).optional(),
     authType: z
-      .enum(['openai', 'anthropic', 'qwen-oauth', 'gemini', 'vertex-ai'])
+      .enum([
+        'openai',
+        'anthropic',
+        'qwen-oauth',
+        'gemini',
+        'vertex-ai',
+        'ollama',
+        'groq',
+        'deepseek',
+        'mistral',
+        'together-ai',
+        'fireworks',
+      ])
       .optional(),
     agents: z
       .array(

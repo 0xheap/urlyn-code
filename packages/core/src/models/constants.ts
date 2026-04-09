@@ -87,11 +87,47 @@ export const AUTH_ENV_MAPPINGS = {
     baseUrl: [],
     model: [],
   },
+  ollama: {
+    apiKey: ['OLLAMA_API_KEY'],
+    baseUrl: ['OLLAMA_BASE_URL'],
+    model: ['OLLAMA_MODEL'],
+  },
+  groq: {
+    apiKey: ['GROQ_API_KEY'],
+    baseUrl: ['GROQ_BASE_URL'],
+    model: ['GROQ_MODEL'],
+  },
+  deepseek: {
+    apiKey: ['DEEPSEEK_API_KEY'],
+    baseUrl: ['DEEPSEEK_BASE_URL'],
+    model: ['DEEPSEEK_MODEL'],
+  },
+  mistral: {
+    apiKey: ['MISTRAL_API_KEY'],
+    baseUrl: ['MISTRAL_BASE_URL'],
+    model: ['MISTRAL_MODEL'],
+  },
+  'together-ai': {
+    apiKey: ['TOGETHER_API_KEY'],
+    baseUrl: ['TOGETHER_BASE_URL'],
+    model: ['TOGETHER_MODEL'],
+  },
+  fireworks: {
+    apiKey: ['FIREWORKS_API_KEY'],
+    baseUrl: ['FIREWORKS_BASE_URL'],
+    model: ['FIREWORKS_MODEL'],
+  },
 } as const satisfies Record<AuthType, AuthEnvMapping>;
 
 export const DEFAULT_MODELS = {
   openai: MAINLINE_CODER_MODEL,
   'qwen-oauth': DEFAULT_QWEN_MODEL,
+  ollama: 'llama3',
+  groq: 'llama3-70b-8192',
+  deepseek: 'deepseek-chat',
+  mistral: 'mistral-tiny',
+  'together-ai': 'mistralai/Mixtral-8x7B-Instruct-v0.1',
+  fireworks: 'accounts/fireworks/models/llama-v3-70b-instruct',
 } as Partial<Record<AuthType, string>>;
 
 /**

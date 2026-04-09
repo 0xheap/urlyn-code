@@ -50,6 +50,18 @@ export class ModelRegistry {
         return 'DYNAMIC_QWEN_OAUTH_BASE_URL';
       case AuthType.USE_OPENAI:
         return DEFAULT_OPENAI_BASE_URL;
+      case AuthType.USE_OLLAMA:
+        return 'http://localhost:11434/v1';
+      case AuthType.USE_GROQ:
+        return 'https://api.groq.com/openai/v1';
+      case AuthType.USE_DEEPSEEK:
+        return 'https://api.deepseek.com/v1';
+      case AuthType.USE_MISTRAL:
+        return 'https://api.mistral.ai/v1';
+      case AuthType.USE_TOGETHER_AI:
+        return 'https://api.together.xyz/v1';
+      case AuthType.USE_FIREWORKS:
+        return 'https://api.fireworks.ai/inference/v1';
       default:
         return '';
     }

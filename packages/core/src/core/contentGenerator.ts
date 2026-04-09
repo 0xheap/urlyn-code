@@ -58,6 +58,12 @@ export enum AuthType {
   USE_GEMINI = 'gemini',
   USE_VERTEX_AI = 'vertex-ai',
   USE_ANTHROPIC = 'anthropic',
+  USE_OLLAMA = 'ollama',
+  USE_GROQ = 'groq',
+  USE_DEEPSEEK = 'deepseek',
+  USE_MISTRAL = 'mistral',
+  USE_TOGETHER_AI = 'together-ai',
+  USE_FIREWORKS = 'fireworks',
 }
 
 /**
@@ -222,7 +228,11 @@ export function validateModelConfig(
   const errors: Error[] = [];
 
   // Qwen OAuth doesn't need validation - it uses dynamic tokens
-  if (config.authType === AuthType.QWEN_OAUTH) {
+  // Ollama doesn't need validation - local models don't require API keys
+  if (
+    config.authType === AuthType.QWEN_OAUTH ||
+    config.authType === AuthType.USE_OLLAMA
+  ) {
     return { valid: true, errors: [] };
   }
 
@@ -306,7 +316,15 @@ export async function createContentGenerator(
 
   let baseGenerator: ContentGenerator;
 
-  if (authType === AuthType.USE_OPENAI) {
+  if (
+    authType === AuthType.USE_OPENAI ||
+    authType === AuthType.USE_OLLAMA ||
+    authType === AuthType.USE_GROQ ||
+    authType === AuthType.USE_DEEPSEEK ||
+    authType === AuthType.USE_MISTRAL ||
+    authType === AuthType.USE_TOGETHER_AI ||
+    authType === AuthType.USE_FIREWORKS
+  ) {
     const { createOpenAIContentGenerator } = await import(
       './openaiContentGenerator/index.js'
     );

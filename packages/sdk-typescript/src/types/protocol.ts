@@ -241,7 +241,13 @@ export type AuthType =
   | 'anthropic'
   | 'qwen-oauth'
   | 'gemini'
-  | 'vertex-ai';
+  | 'vertex-ai'
+  | 'ollama'
+  | 'groq'
+  | 'deepseek'
+  | 'mistral'
+  | 'together-ai'
+  | 'fireworks';
 
 /**
  * TODO: Align with `ToolCallConfirmationDetails`

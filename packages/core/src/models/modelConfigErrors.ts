@@ -14,6 +14,18 @@ export function getDefaultApiKeyEnvVar(authType: string | undefined): string {
       return 'GEMINI_API_KEY';
     case 'vertex-ai':
       return 'GOOGLE_API_KEY';
+    case 'ollama':
+      return 'OLLAMA_API_KEY';
+    case 'groq':
+      return 'GROQ_API_KEY';
+    case 'deepseek':
+      return 'DEEPSEEK_API_KEY';
+    case 'mistral':
+      return 'MISTRAL_API_KEY';
+    case 'together-ai':
+      return 'TOGETHER_API_KEY';
+    case 'fireworks':
+      return 'FIREWORKS_API_KEY';
     default:
       return 'API_KEY';
   }
@@ -29,6 +41,18 @@ export function getDefaultModelEnvVar(authType: string | undefined): string {
       return 'GEMINI_MODEL';
     case 'vertex-ai':
       return 'GOOGLE_MODEL';
+    case 'ollama':
+      return 'OLLAMA_MODEL';
+    case 'groq':
+      return 'GROQ_MODEL';
+    case 'deepseek':
+      return 'DEEPSEEK_MODEL';
+    case 'mistral':
+      return 'MISTRAL_MODEL';
+    case 'together-ai':
+      return 'TOGETHER_MODEL';
+    case 'fireworks':
+      return 'FIREWORKS_MODEL';
     default:
       return 'MODEL';
   }
