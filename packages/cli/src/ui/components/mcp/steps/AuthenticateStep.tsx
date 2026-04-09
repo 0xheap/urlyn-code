@@ -15,8 +15,8 @@ import {
   MCPOAuthProvider,
   MCPOAuthTokenStorage,
   getErrorMessage,
-} from '@qwen-code/qwen-code-core';
-import type { OAuthDisplayPayload } from '@qwen-code/qwen-code-core';
+} from '@urlyn-code/urlyn-code-core';
+import type { OAuthDisplayPayload } from '@urlyn-code/urlyn-code-core';
 import { appEvents, AppEvent } from '../../../../utils/events.js';
 
 type AuthState = 'idle' | 'authenticating' | 'success' | 'error';

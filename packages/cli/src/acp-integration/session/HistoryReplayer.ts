@@ -4,7 +4,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import type { ChatRecord, AgentResultDisplay } from '@qwen-code/qwen-code-core';
+import type {
+  ChatRecord,
+  AgentResultDisplay,
+} from '@urlyn-code/urlyn-code-core';
 import type {
   Content,
   GenerateContentResponseUsageMetadata,

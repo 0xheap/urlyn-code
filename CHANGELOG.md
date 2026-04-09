@@ -87,7 +87,7 @@
 ## 0.0.8
 
 - Synced upstream `gemini-cli` to v0.1.19.
-- Updated documentation branding from **Gemini CLI** to **Qwen Code**.
+- Updated documentation branding from **Gemini CLI** to **Urlyn Code**.
 - Added multilingual docs links in `README.md`.
 - Added deterministic cache control for the DashScope provider.
 - Added option to choose a project-level or global save location.

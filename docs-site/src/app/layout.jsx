@@ -9,11 +9,11 @@ export const metadata = {
 };
 
 const banner = (
-  <Banner storageKey="some-key">Qwen Code 0.5.0 is released 🎉</Banner>
+  <Banner storageKey="some-key">Urlyn Code 0.5.0 is released 🎉</Banner>
 );
 const navbar = (
   <Navbar
-    logo={<b>Qwen Code</b>}
+    logo={<b>Urlyn Code</b>}
     // ... Your additional navbar options
   />
 );
@@ -39,7 +39,7 @@ export default async function RootLayout({ children }) {
           banner={banner}
           navbar={navbar}
           pageMap={await getPageMap()}
-          docsRepositoryBase="https://github.com/QwenLM/qwen-code/docs"
+          docsRepositoryBase="https://github.com/QwenLM/urlyn-code/docs"
           // Use a very large finite integer to expand all folders by default.
           // (Some schema validators reject `Infinity`.)
           sidebar={{ defaultMenuCollapseLevel: 9999 }}

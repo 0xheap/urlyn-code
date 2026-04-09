@@ -6,7 +6,7 @@
 
 import type React from 'react';
 import { useState } from 'react';
-import { AuthType } from '@qwen-code/qwen-code-core';
+import { AuthType } from '@urlyn-code/urlyn-code-core';
 import { Box, Text } from 'ink';
 import Link from 'ink-link';
 import { theme } from '../semantic-colors.js';
@@ -28,7 +28,7 @@ import {
 } from '../../constants/alibabaStandardApiKey.js';
 
 const MODEL_PROVIDERS_DOCUMENTATION_URL =
-  'https://qwenlm.github.io/qwen-code-docs/en/users/configuration/model-providers/';
+  'https://qwenlm.github.io/urlyn-code-docs/en/users/configuration/model-providers/';
 
 function parseDefaultAuthType(
   defaultAuthType: string | undefined,
@@ -712,11 +712,11 @@ export function AuthDialog(): React.JSX.Element {
           </Box>
           <Box>
             <Link
-              url="https://qwenlm.github.io/qwen-code-docs/en/users/support/tos-privacy/"
+              url="https://qwenlm.github.io/urlyn-code-docs/en/users/support/tos-privacy/"
               fallback={false}
             >
               <Text color={theme.text.secondary} underline>
-                https://qwenlm.github.io/qwen-code-docs/en/users/support/tos-privacy/
+                https://qwenlm.github.io/urlyn-code-docs/en/users/support/tos-privacy/
               </Text>
             </Link>
           </Box>

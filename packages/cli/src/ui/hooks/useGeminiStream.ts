@@ -17,7 +17,7 @@ import type {
   ThoughtSummary,
   ToolCallRequestInfo,
   GeminiErrorEventValue,
-} from '@qwen-code/qwen-code-core';
+} from '@urlyn-code/urlyn-code-core';
 import {
   GeminiEventType as ServerGeminiEventType,
   SendMessageType,
@@ -41,7 +41,7 @@ import {
   ApiCancelEvent,
   isSupportedImageMimeType,
   getUnsupportedImageFormatWarning,
-} from '@qwen-code/qwen-code-core';
+} from '@urlyn-code/urlyn-code-core';
 import { type Part, type PartListUnion, FinishReason } from '@google/genai';
 import type {
   HistoryItem,

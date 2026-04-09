@@ -50,7 +50,7 @@ export type TransportOptions = {
 
 export interface QuerySystemPromptPreset {
   type: 'preset';
-  preset: 'qwen_code';
+  preset: 'urlyn_code';
   append?: string;
 }
 
@@ -111,7 +111,7 @@ export type McpAuthProviderType =
  * - Streamable HTTP: httpUrl, headers
  * - WebSocket: tcp
  *
- * This interface aligns with MCPServerConfig in @qwen-code/qwen-code-core.
+ * This interface aligns with MCPServerConfig in @urlyn-code/urlyn-code-core.
  */
 export interface CLIMcpServerConfig {
   // For stdio transport
@@ -240,8 +240,8 @@ export interface QueryOptions {
    * System prompt configuration for the Qwen CLI session.
    *
    * - `string`: fully overrides the main session system prompt
-   * - `{ type: 'preset', preset: 'qwen_code', append?: string }`:
-   *   uses Qwen Code's built-in prompt as the base and optionally appends extra
+   * - `{ type: 'preset', preset: 'urlyn_code', append?: string }`:
+   *   uses Urlyn Code's built-in prompt as the base and optionally appends extra
    *   instructions for the main session
    */
   systemPrompt?: QuerySystemPrompt;

@@ -7,7 +7,7 @@
 import type React from 'react';
 import { Box, Text } from 'ink';
 import Gradient from 'ink-gradient';
-import { shortenPath, tildeifyPath } from '@qwen-code/qwen-code-core';
+import { shortenPath, tildeifyPath } from '@urlyn-code/urlyn-code-core';
 import { shortAsciiLogo } from './AsciiArt.js';
 import { getAsciiArtWidth, getCachedStringWidth } from '../utils/textUtils.js';
 import { useTerminalSize } from '../hooks/useTerminalSize.js';
@@ -130,7 +130,7 @@ export const Header: React.FC<HeaderProps> = ({
         flexGrow={showLogo ? 0 : 1}
         width={showLogo ? availableInfoPanelWidth : undefined}
       >
-        {/* Title line: >_ Qwen Code (v{version}) */}
+        {/* Title line: >_ Urlyn Code (v{version}) */}
         <Text>
           <Text bold color={fixedColors.headerTitle}>
             &gt;_ Urlyn Code

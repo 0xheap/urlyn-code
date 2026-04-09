@@ -21,8 +21,8 @@ import {
 } from './gemini.js';
 import { type LoadedSettings } from './config/settings.js';
 import { appEvents, AppEvent } from './utils/events.js';
-import type { Config } from '@qwen-code/qwen-code-core';
-import { OutputFormat } from '@qwen-code/qwen-code-core';
+import type { Config } from '@urlyn-code/urlyn-code-core';
+import { OutputFormat } from '@urlyn-code/urlyn-code-core';
 
 const mockWriteStderrLine = vi.hoisted(() => vi.fn());
 
@@ -397,8 +397,8 @@ describe('gemini.tsx main function kitty protocol', () => {
 
   beforeEach(() => {
     // Set no relaunch in tests since process spawning causing issues in tests
-    originalEnvNoRelaunch = process.env['QWEN_CODE_NO_RELAUNCH'];
-    process.env['QWEN_CODE_NO_RELAUNCH'] = 'true';
+    originalEnvNoRelaunch = process.env['URLYN_CODE_NO_RELAUNCH'];
+    process.env['URLYN_CODE_NO_RELAUNCH'] = 'true';
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     if (!(process.stdin as any).setRawMode) {
@@ -420,9 +420,9 @@ describe('gemini.tsx main function kitty protocol', () => {
   afterEach(() => {
     // Restore original env variables
     if (originalEnvNoRelaunch !== undefined) {
-      process.env['QWEN_CODE_NO_RELAUNCH'] = originalEnvNoRelaunch;
+      process.env['URLYN_CODE_NO_RELAUNCH'] = originalEnvNoRelaunch;
     } else {
-      delete process.env['QWEN_CODE_NO_RELAUNCH'];
+      delete process.env['URLYN_CODE_NO_RELAUNCH'];
     }
   });
 

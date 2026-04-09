@@ -1,10 +1,10 @@
 /**
  * @license
- * Copyright 2025 Qwen Code
+ * Copyright 2025 Urlyn Code
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import type { SessionListItem } from '@qwen-code/qwen-code-core';
+import type { SessionListItem } from '@urlyn-code/urlyn-code-core';
 
 /**
  * State for managing loaded sessions in the session picker.

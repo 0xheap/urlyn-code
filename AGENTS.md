@@ -1,10 +1,10 @@
-# AGENTS.md - Qwen Code Project Context
+# AGENTS.md - Urlyn Code Project Context
 
 ## Project Overview
 
-**Qwen Code** is an open-source AI agent for the terminal, optimized for [Qwen3-Coder](https://github.com/QwenLM/Qwen3-Coder). It helps developers understand large codebases, automate tedious work, and ship faster.
+**Urlyn Code** is an open-source AI agent for the terminal, optimized for [Qwen3-Coder](https://github.com/QwenLM/Qwen3-Coder). It helps developers understand large codebases, automate tedious work, and ship faster.
 
-This project is based on [Google Gemini CLI](https://github.com/google-gemini/gemini-cli) with adaptations to better support Qwen-Coder models.
+This project is based on [Google Gemini CLI](https://github.com/google-gemini/gemini-cli) with adaptations to better support Urlyn-Coder models.
 
 ### Key Features
 
@@ -44,7 +44,7 @@ This project is based on [Google Gemini CLI](https://github.com/google-gemini/ge
 
 ### Package Details
 
-#### `@qwen-code/qwen-code` (packages/cli/)
+#### `@urlyn-code/urlyn-code` (packages/cli/)
 
 The main CLI package providing:
 
@@ -54,7 +54,7 @@ The main CLI package providing:
 - Configuration management
 - Command system (`/help`, `/clear`, `/compress`, etc.)
 
-#### `@qwen-code/qwen-code-core` (packages/core/)
+#### `@urlyn-code/urlyn-code-core` (packages/core/)
 
 Core library containing:
 
@@ -78,8 +78,8 @@ Core library containing:
 
 ```bash
 # Clone and install
-git clone https://github.com/QwenLM/qwen-code.git
-cd qwen-code
+git clone https://github.com/QwenLM/urlyn-code.git
+cd urlyn-code
 npm install
 ```
 
@@ -174,7 +174,7 @@ npm run typecheck
 import { something } from './utils/something.js';
 
 // Between packages - use package names
-import { Config } from '@qwen-code/qwen-code-core';
+import { Config } from '@urlyn-code/urlyn-code-core';
 ```
 
 ### Testing Patterns
@@ -250,7 +250,7 @@ DEBUG=1 qwen
 
 ## Documentation
 
-- User documentation: <https://qwenlm.github.io/qwen-code-docs/>
+- User documentation: <https://qwenlm.github.io/urlyn-code-docs/>
 - Local docs development:
 
   ```bash
@@ -292,6 +292,6 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md) for detailed guidelines. Key points:
 - `/compress` - Compress history to save tokens
 - `/stats` - Show session information
 - `/bug` - Submit bug report
-- `/exit` or `/quit` - Exit Qwen Code
+- `/exit` or `/quit` - Exit Urlyn Code
 
 ---

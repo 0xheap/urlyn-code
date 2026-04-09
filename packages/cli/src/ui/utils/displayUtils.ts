@@ -5,7 +5,7 @@
  */
 
 import { theme } from '../semantic-colors.js';
-import { AgentStatus } from '@qwen-code/qwen-code-core';
+import { AgentStatus } from '@urlyn-code/urlyn-code-core';
 
 // --- Status Labels ---
 

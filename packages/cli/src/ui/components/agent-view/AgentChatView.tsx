@@ -28,7 +28,7 @@ import {
   AgentEventType,
   getGitBranch,
   type AgentStatusChangeEvent,
-} from '@qwen-code/qwen-code-core';
+} from '@urlyn-code/urlyn-code-core';
 import {
   useAgentViewState,
   useAgentViewActions,

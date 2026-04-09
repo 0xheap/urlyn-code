@@ -9,7 +9,7 @@ import open from 'open';
 import { bugCommand } from './bugCommand.js';
 import { createMockCommandContext } from '../../test-utils/mockCommandContext.js';
 import { GIT_COMMIT_INFO } from '../../generated/git-commit.js';
-import { AuthType } from '@qwen-code/qwen-code-core';
+import { AuthType } from '@urlyn-code/urlyn-code-core';
 import * as systemInfoUtils from '../../utils/systemInfo.js';
 
 // Mock dependencies
@@ -58,8 +58,8 @@ describe('bugCommand', () => {
 
     const qwenCodeLine =
       GIT_COMMIT_INFO && !['N/A'].includes(GIT_COMMIT_INFO)
-        ? `Qwen Code: 0.1.0 (${GIT_COMMIT_INFO})`
-        : 'Qwen Code: 0.1.0';
+        ? `Urlyn Code: 0.1.0 (${GIT_COMMIT_INFO})`
+        : 'Urlyn Code: 0.1.0';
     const expectedInfo = `${qwenCodeLine}
 Runtime: Node.js v20.0.0 / npm 10.0.0
 IDE Client: VSCode
@@ -71,7 +71,7 @@ Sandbox: test
 Proxy: no proxy
 Memory Usage: 100 MB`;
     const expectedUrl =
-      'https://github.com/QwenLM/qwen-code/issues/new?template=bug_report.yml&title=A%20test%20bug&info=' +
+      'https://github.com/QwenLM/urlyn-code/issues/new?template=bug_report.yml&title=A%20test%20bug&info=' +
       encodeURIComponent(`\n${expectedInfo}\n`);
 
     expect(open).toHaveBeenCalledWith(expectedUrl);
@@ -93,8 +93,8 @@ Memory Usage: 100 MB`;
 
     const qwenCodeLine =
       GIT_COMMIT_INFO && !['N/A'].includes(GIT_COMMIT_INFO)
-        ? `Qwen Code: 0.1.0 (${GIT_COMMIT_INFO})`
-        : 'Qwen Code: 0.1.0';
+        ? `Urlyn Code: 0.1.0 (${GIT_COMMIT_INFO})`
+        : 'Urlyn Code: 0.1.0';
     const expectedInfo = `${qwenCodeLine}
 Runtime: Node.js v20.0.0 / npm 10.0.0
 IDE Client: VSCode
@@ -146,8 +146,8 @@ Memory Usage: 100 MB`;
 
     const qwenCodeLine =
       GIT_COMMIT_INFO && !['N/A'].includes(GIT_COMMIT_INFO)
-        ? `Qwen Code: 0.1.0 (${GIT_COMMIT_INFO})`
-        : 'Qwen Code: 0.1.0';
+        ? `Urlyn Code: 0.1.0 (${GIT_COMMIT_INFO})`
+        : 'Urlyn Code: 0.1.0';
     const expectedInfo = `${qwenCodeLine}
 Runtime: Node.js v20.0.0 / npm 10.0.0
 IDE Client: VSCode
@@ -161,7 +161,7 @@ Sandbox: test
 Proxy: no proxy
 Memory Usage: 100 MB`;
     const expectedUrl =
-      'https://github.com/QwenLM/qwen-code/issues/new?template=bug_report.yml&title=OpenAI%20bug&info=' +
+      'https://github.com/QwenLM/urlyn-code/issues/new?template=bug_report.yml&title=OpenAI%20bug&info=' +
       encodeURIComponent(`\n${expectedInfo}\n`);
 
     expect(open).toHaveBeenCalledWith(expectedUrl);

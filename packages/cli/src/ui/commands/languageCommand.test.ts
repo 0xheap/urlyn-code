@@ -58,9 +58,9 @@ vi.mock('node:fs', async (importOriginal) => {
 });
 
 // Mock Storage from core
-vi.mock('@qwen-code/qwen-code-core', async (importOriginal) => {
+vi.mock('@urlyn-code/urlyn-code-core', async (importOriginal) => {
   const actual =
-    await importOriginal<typeof import('@qwen-code/qwen-code-core')>();
+    await importOriginal<typeof import('@urlyn-code/urlyn-code-core')>();
   return {
     ...actual,
     Storage: {
@@ -741,7 +741,7 @@ describe('languageCommand', () => {
       vi.mocked(i18n.detectSystemLanguage).mockReturnValue('en');
       vi.mocked(fs.readFileSync).mockReturnValue(
         `# Output language preference: English
-<!-- qwen-code:llm-output-language: English -->
+<!-- urlyn-code:llm-output-language: English -->
 `,
       );
 
@@ -754,7 +754,7 @@ describe('languageCommand', () => {
       vi.mocked(fs.existsSync).mockReturnValue(true);
       vi.mocked(fs.readFileSync).mockReturnValue(
         `# Output language preference: English
-<!-- qwen-code:llm-output-language: English -->
+<!-- urlyn-code:llm-output-language: English -->
 `,
       );
 

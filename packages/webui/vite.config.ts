@@ -10,7 +10,7 @@ import dts from 'vite-plugin-dts';
 import { resolve } from 'path';
 
 /**
- * Vite configuration for @qwen-code/webui library
+ * Vite configuration for @urlyn-code/webui library
  *
  * Build outputs:
  * - ESM: dist/index.js (primary format)
@@ -19,9 +19,9 @@ import { resolve } from 'path';
  * - TypeScript declarations: dist/index.d.ts
  * - CSS: dist/styles.css (optional styles)
  *
- * The followup subpath (@qwen-code/webui/followup) is built separately
+ * The followup subpath (@urlyn-code/webui/followup) is built separately
  * via vite.config.followup.ts so that the root entry stays free of
- * @qwen-code/qwen-code-core dependencies.
+ * @urlyn-code/urlyn-code-core dependencies.
  */
 export default defineConfig({
   plugins: [
@@ -36,7 +36,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
-      name: 'QwenCodeWebUI',
+      name: 'UrlynCodeWebUI',
       formats: ['es', 'cjs', 'umd'],
       fileName: (format) => {
         if (format === 'es') return 'index.js';

@@ -24,9 +24,9 @@ import type { CompletionItem } from '../../types/completion.js';
 import type { ContextUsage } from './ContextIndicator.js';
 /**
  * Minimal follow-up state shape used by InputForm.
- * Defined locally to avoid pulling @qwen-code/qwen-code-core into the
+ * Defined locally to avoid pulling @urlyn-code/urlyn-code-core into the
  * root entry's type declarations. The full FollowupState lives in
- * '@qwen-code/webui/followup'.
+ * '@urlyn-code/webui/followup'.
  */
 interface InputFormFollowupState {
   /** Current suggestion text */
@@ -203,7 +203,7 @@ export const InputForm: FC<InputFormProps> = ({
   onCompletionClose,
   onPaste,
   extraContent,
-  placeholder = 'Ask Qwen Code …',
+  placeholder = 'Ask Urlyn Code …',
   canSubmit,
   followupState,
   onAcceptFollowup,

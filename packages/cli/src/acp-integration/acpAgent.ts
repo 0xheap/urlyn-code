@@ -18,7 +18,7 @@ import {
   type Config,
   type ConversationRecord,
   type DeviceAuthorizationData,
-} from '@qwen-code/qwen-code-core';
+} from '@urlyn-code/urlyn-code-core';
 import {
   AgentSideConnection,
   RequestError,
@@ -154,8 +154,8 @@ class QwenAgent implements Agent {
     return {
       protocolVersion: PROTOCOL_VERSION,
       agentInfo: {
-        name: 'qwen-code',
-        title: 'Qwen Code',
+        name: 'urlyn-code',
+        title: 'Urlyn Code',
         version,
       },
       authMethods,
@@ -417,7 +417,7 @@ class QwenAgent implements Agent {
     if (!selectedType) {
       throw RequestError.authRequired(
         { authMethods: this.pickAuthMethodsForAuthRequired() },
-        'Use Qwen Code CLI to authenticate first.',
+        'Use Urlyn Code CLI to authenticate first.',
       );
     }
 

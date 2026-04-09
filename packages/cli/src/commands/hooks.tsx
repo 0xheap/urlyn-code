@@ -5,14 +5,14 @@
  */
 
 import type { CommandModule } from 'yargs';
-import { createDebugLogger } from '@qwen-code/qwen-code-core';
+import { createDebugLogger } from '@urlyn-code/urlyn-code-core';
 
 const debugLogger = createDebugLogger('HOOKS_UI');
 
 export const hooksCommand: CommandModule = {
   command: 'hooks',
   aliases: ['hook'],
-  describe: 'Manage Qwen Code hooks (use /hooks in interactive mode).',
+  describe: 'Manage Urlyn Code hooks (use /hooks in interactive mode).',
   builder: (yargs) => yargs.version(false).help(false),
   handler: () => {
     // In CLI mode, this command is not interactive.

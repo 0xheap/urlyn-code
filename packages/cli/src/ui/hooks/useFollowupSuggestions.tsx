@@ -14,11 +14,11 @@ import {
   createFollowupController,
   logPromptSuggestion,
   PromptSuggestionEvent,
-} from '@qwen-code/qwen-code-core';
-import type { FollowupState, Config } from '@qwen-code/qwen-code-core';
+} from '@urlyn-code/urlyn-code-core';
+import type { FollowupState, Config } from '@urlyn-code/urlyn-code-core';
 
 // Re-export for consumers that import from here
-export type { FollowupState } from '@qwen-code/qwen-code-core';
+export type { FollowupState } from '@urlyn-code/urlyn-code-core';
 
 /**
  * Options for the hook

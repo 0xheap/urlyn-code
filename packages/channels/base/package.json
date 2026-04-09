@@ -1,7 +1,7 @@
 {
-  "name": "@qwen-code/channel-base",
+  "name": "@urlyn-code/channel-base",
   "version": "0.14.1",
-  "description": "Base channel infrastructure for Qwen Code",
+  "description": "Base channel infrastructure for Urlyn Code",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

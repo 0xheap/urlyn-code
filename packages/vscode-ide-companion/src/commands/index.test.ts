@@ -104,7 +104,7 @@ describe('registerNewCommands', () => {
     await getRegisteredHandler(focusChatCommand)();
 
     expect(executeCommand).toHaveBeenCalledWith(
-      'qwen-code.chatView.secondary.focus',
+      'urlyn-code.chatView.secondary.focus',
     );
   });
 
@@ -122,7 +122,7 @@ describe('registerNewCommands', () => {
     await getRegisteredHandler(focusChatCommand)();
 
     expect(executeCommand).toHaveBeenCalledWith(
-      'qwen-code.chatView.sidebar.focus',
+      'urlyn-code.chatView.sidebar.focus',
     );
   });
 });

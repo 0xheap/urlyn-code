@@ -5,8 +5,8 @@
  */
 
 import { useCallback, useEffect, useState } from 'react';
-import type { Config, ModelProvidersConfig } from '@qwen-code/qwen-code-core';
-import { AuthType } from '@qwen-code/qwen-code-core';
+import type { Config, ModelProvidersConfig } from '@urlyn-code/urlyn-code-core';
+import { AuthType } from '@urlyn-code/urlyn-code-core';
 import type { LoadedSettings } from '../../config/settings.js';
 import { getPersistScopeForModelSelection } from '../../config/modelProvidersScope.js';
 import {

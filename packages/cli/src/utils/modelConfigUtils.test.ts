@@ -9,7 +9,7 @@ import {
   AuthType,
   resolveModelConfig,
   type ProviderModelConfig,
-} from '@qwen-code/qwen-code-core';
+} from '@urlyn-code/urlyn-code-core';
 import {
   getAuthTypeFromEnv,
   resolveCliGenerationConfig,
@@ -18,9 +18,9 @@ import type { Settings } from '../config/settings.js';
 
 const mockWriteStderrLine = vi.hoisted(() => vi.fn());
 
-vi.mock('@qwen-code/qwen-code-core', async (importOriginal) => {
+vi.mock('@urlyn-code/urlyn-code-core', async (importOriginal) => {
   const original =
-    await importOriginal<typeof import('@qwen-code/qwen-code-core')>();
+    await importOriginal<typeof import('@urlyn-code/urlyn-code-core')>();
   return {
     ...original,
     resolveModelConfig: vi.fn(),

@@ -5,7 +5,7 @@
  */
 
 import * as vscode from 'vscode';
-import { Storage } from '@qwen-code/qwen-code-core';
+import { Storage } from '@urlyn-code/urlyn-code-core';
 
 export function getLocalResourceRoots(
   extensionUri: vscode.Uri,
@@ -65,17 +65,17 @@ export class PanelManager {
       return false; // Panel already exists
     }
 
-    // First, check if there's an existing Qwen Code group
-    const existingGroup = this.findExistingQwenCodeGroup();
+    // First, check if there's an existing Urlyn Code group
+    const existingGroup = this.findExistingUrlynCodeGroup();
 
     if (existingGroup) {
-      // If Qwen Code webview already exists in a locked group, create the new panel in that same group
+      // If Urlyn Code webview already exists in a locked group, create the new panel in that same group
       console.log(
-        '[PanelManager] Found existing Qwen Code group, creating panel in same group',
+        '[PanelManager] Found existing Urlyn Code group, creating panel in same group',
       );
       this.panel = vscode.window.createWebviewPanel(
         'qwenCode.chat',
-        'Qwen Code',
+        'Urlyn Code',
         { viewColumn: existingGroup.viewColumn, preserveFocus: false },
         {
           enableScripts: true,
@@ -89,7 +89,7 @@ export class PanelManager {
       // Track the group column hosting this panel
       this.panelGroupViewColumn = existingGroup.viewColumn;
     } else {
-      // If no existing Qwen Code group, create a new group to the right of the active editor group
+      // If no existing Urlyn Code group, create a new group to the right of the active editor group
       try {
         // Create a new group to the right of the current active group
         await vscode.commands.executeCommand('workbench.action.newGroupRight');
@@ -103,7 +103,7 @@ export class PanelManager {
           vscode.window.activeTextEditor?.viewColumn || vscode.ViewColumn.One;
         this.panel = vscode.window.createWebviewPanel(
           'qwenCode.chat',
-          'Qwen Code',
+          'Urlyn Code',
           { viewColumn: activeColumn, preserveFocus: false },
           {
             enableScripts: true,
@@ -124,7 +124,7 @@ export class PanelManager {
 
       this.panel = vscode.window.createWebviewPanel(
         'qwenCode.chat',
-        'Qwen Code',
+        'Urlyn Code',
         { viewColumn: newGroupColumn, preserveFocus: false },
         {
           enableScripts: true,
@@ -158,10 +158,10 @@ export class PanelManager {
   }
 
   /**
-   * Find the group and view column where the existing Qwen Code webview is located
+   * Find the group and view column where the existing Urlyn Code webview is located
    * @returns The found group and view column, or undefined if not found
    */
-  private findExistingQwenCodeGroup():
+  private findExistingUrlynCodeGroup():
     | { group: vscode.TabGroup; viewColumn: vscode.ViewColumn }
     | undefined {
     for (const group of vscode.window.tabGroups.all) {
@@ -174,8 +174,8 @@ export class PanelManager {
           isWebviewInput(input) &&
           input.viewType === 'mainThreadWebview-qwenCode.chat'
         ) {
-          // Found an existing Qwen Code tab
-          console.log('[PanelManager] Found existing Qwen Code group:', {
+          // Found an existing Urlyn Code tab
+          console.log('[PanelManager] Found existing Urlyn Code group:', {
             viewColumn: group.viewColumn,
             tabCount: group.tabs.length,
             isActive: group.isActive,

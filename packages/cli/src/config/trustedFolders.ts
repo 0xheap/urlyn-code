@@ -12,7 +12,7 @@ import {
   getErrorMessage,
   isWithinRoot,
   ideContextStore,
-} from '@qwen-code/qwen-code-core';
+} from '@urlyn-code/urlyn-code-core';
 import type { Settings } from './settings.js';
 import stripJsonComments from 'strip-json-comments';
 import { writeStderrLine } from '../utils/stdioHelpers.js';
@@ -22,8 +22,8 @@ export const SETTINGS_DIRECTORY_NAME = '.qwen';
 export const USER_SETTINGS_DIR = path.join(homedir(), SETTINGS_DIRECTORY_NAME);
 
 export function getTrustedFoldersPath(): string {
-  if (process.env['QWEN_CODE_TRUSTED_FOLDERS_PATH']) {
-    return process.env['QWEN_CODE_TRUSTED_FOLDERS_PATH'];
+  if (process.env['URLYN_CODE_TRUSTED_FOLDERS_PATH']) {
+    return process.env['URLYN_CODE_TRUSTED_FOLDERS_PATH'];
   }
   return path.join(USER_SETTINGS_DIR, TRUSTED_FOLDERS_FILENAME);
 }

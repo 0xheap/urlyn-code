@@ -17,7 +17,7 @@ import type {
   ToolResult,
   ChatRecord,
   AgentEventEmitter,
-} from '@qwen-code/qwen-code-core';
+} from '@urlyn-code/urlyn-code-core';
 import {
   AuthType,
   ApprovalMode,
@@ -43,7 +43,7 @@ import {
   injectPermissionRulesIfMissing,
   NotificationType,
   persistPermissionOutcome,
-} from '@qwen-code/qwen-code-core';
+} from '@urlyn-code/urlyn-code-core';
 
 import { RequestError } from '@agentclientprotocol/sdk';
 import type {
@@ -722,7 +722,7 @@ export class Session implements SessionContext {
       return;
     }
 
-    const { IdeClient } = await import('@qwen-code/qwen-code-core');
+    const { IdeClient } = await import('@urlyn-code/urlyn-code-core');
     const ideClient = await IdeClient.getInstance();
     const cliOutcome =
       outcome === ToolConfirmationOutcome.Cancel ? 'rejected' : 'accepted';
@@ -808,7 +808,7 @@ export class Session implements SessionContext {
     if (pm && !(await pm.isToolEnabled(fc.name as string))) {
       return earlyErrorResponse(
         new Error(
-          `Qwen Code requires permission to use "${fc.name}", but that permission was declined.`,
+          `Urlyn Code requires permission to use "${fc.name}", but that permission was declined.`,
         ),
         fc.name,
       );
@@ -988,7 +988,7 @@ export class Session implements SessionContext {
           if (hooksEnabled && messageBus) {
             void fireNotificationHook(
               messageBus,
-              `Qwen Code needs your permission to use ${fc.name}`,
+              `Urlyn Code needs your permission to use ${fc.name}`,
               NotificationType.PermissionPrompt,
               'Permission needed',
             );
@@ -1225,7 +1225,7 @@ export class Session implements SessionContext {
         return normalizePartList(result.content);
 
       case 'message': {
-        await this.client.extNotification('_qwencode/slash_command', {
+        await this.client.extNotification('_urlyncode/slash_command', {
           sessionId: this.sessionId,
           command: originalPrompt
             .filter((block) => block.type === 'text')
@@ -1252,7 +1252,7 @@ export class Session implements SessionContext {
 
         // Stream all messages to the client
         for await (const msg of result.messages) {
-          await this.client.extNotification('_qwencode/slash_command', {
+          await this.client.extNotification('_urlyncode/slash_command', {
             sessionId: this.sessionId,
             command,
             messageType: msg.messageType,

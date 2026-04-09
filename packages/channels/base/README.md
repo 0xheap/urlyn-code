@@ -1,13 +1,13 @@
-# @qwen-code/channel-base
+# @urlyn-code/channel-base
 
-Base infrastructure for building Qwen Code channel adapters. Provides the abstract base class, access control, session routing, and the ACP bridge that communicates with the agent.
+Base infrastructure for building Urlyn Code channel adapters. Provides the abstract base class, access control, session routing, and the ACP bridge that communicates with the agent.
 
 If you're building a channel plugin, this is your only dependency.
 
 ## Install
 
 ```bash
-npm install @qwen-code/channel-base
+npm install @urlyn-code/channel-base
 ```
 
 ## Quick start
@@ -15,12 +15,12 @@ npm install @qwen-code/channel-base
 Subclass `ChannelBase` and implement three methods:
 
 ```typescript
-import { ChannelBase } from '@qwen-code/channel-base';
+import { ChannelBase } from '@urlyn-code/channel-base';
 import type {
   ChannelConfig,
   Envelope,
   AcpBridge,
-} from '@qwen-code/channel-base';
+} from '@urlyn-code/channel-base';
 
 class MyChannel extends ChannelBase {
   async connect(): Promise<void> {
@@ -42,7 +42,7 @@ class MyChannel extends ChannelBase {
 Export a `ChannelPlugin` object so the extension loader can discover it:
 
 ```typescript
-import type { ChannelPlugin } from '@qwen-code/channel-base';
+import type { ChannelPlugin } from '@urlyn-code/channel-base';
 
 export const plugin: ChannelPlugin = {
   channelType: 'my-platform',
@@ -53,7 +53,7 @@ export const plugin: ChannelPlugin = {
 };
 ```
 
-For a complete working example, see [`@qwen-code/channel-plugin-example`](../plugin-example/).
+For a complete working example, see [`@urlyn-code/channel-plugin-example`](../plugin-example/).
 
 ## Architecture
 
@@ -78,15 +78,15 @@ Everything between `handleInbound()` and `sendMessage()` is handled by the base 
 
 ### Classes
 
-| Class           | Purpose                                                          |
-| --------------- | ---------------------------------------------------------------- |
-| `ChannelBase`   | Abstract base class — extend this to build a channel adapter     |
-| `AcpBridge`     | Spawns and communicates with the `qwen-code --acp` agent process |
-| `BlockStreamer` | Progressive multi-message delivery for block streaming           |
-| `SessionRouter` | Maps senders to ACP sessions with configurable scoping           |
-| `SenderGate`    | DM access control (allowlist / pairing / open)                   |
-| `GroupGate`     | Group chat policy and @mention gating                            |
-| `PairingStore`  | Pairing code generation, approval, and allowlist persistence     |
+| Class           | Purpose                                                           |
+| --------------- | ----------------------------------------------------------------- |
+| `ChannelBase`   | Abstract base class — extend this to build a channel adapter      |
+| `AcpBridge`     | Spawns and communicates with the `urlyn-code --acp` agent process |
+| `BlockStreamer` | Progressive multi-message delivery for block streaming            |
+| `SessionRouter` | Maps senders to ACP sessions with configurable scoping            |
+| `SenderGate`    | DM access control (allowlist / pairing / open)                    |
+| `GroupGate`     | Group chat policy and @mention gating                             |
+| `PairingStore`  | Pairing code generation, approval, and allowlist persistence      |
 
 ### Types
 
@@ -135,7 +135,7 @@ constructor(name: string, config: ChannelConfig, bridge: AcpBridge, options?: Ch
 
 ### AcpBridge
 
-Manages the `qwen-code --acp` child process and ACP sessions.
+Manages the `urlyn-code --acp` child process and ACP sessions.
 
 ```typescript
 constructor(options: { cliEntryPath: string; cwd: string; model?: string })
@@ -292,4 +292,4 @@ Block streaming and `onResponseChunk` work independently — plugins can overrid
 ## Further reading
 
 - [Channel Plugin Developer Guide](../../docs/developers/channel-plugins.md)
-- [`@qwen-code/channel-plugin-example`](../plugin-example/) — working reference implementation
+- [`@urlyn-code/channel-plugin-example`](../plugin-example/) — working reference implementation

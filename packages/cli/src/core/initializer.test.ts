@@ -5,9 +5,9 @@
  */
 
 import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { AuthType } from '@qwen-code/qwen-code-core';
+import { AuthType } from '@urlyn-code/urlyn-code-core';
 import type { LoadedSettings } from '../config/settings.js';
-import type { Config } from '@qwen-code/qwen-code-core';
+import type { Config } from '@urlyn-code/urlyn-code-core';
 import { initializeApp } from './initializer.js';
 import { performInitialAuth } from './auth.js';
 import { validateTheme } from './theme.js';
@@ -28,7 +28,7 @@ vi.mock('../i18n/index.js', () => ({
 describe('initializeApp', () => {
   beforeEach(() => {
     vi.clearAllMocks();
-    delete process.env['QWEN_CODE_LANG'];
+    delete process.env['URLYN_CODE_LANG'];
 
     vi.mocked(initializeI18n).mockResolvedValue(undefined);
     vi.mocked(validateTheme).mockReturnValue(null);

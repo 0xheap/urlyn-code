@@ -16,7 +16,7 @@ import type {
   AnsiOutput,
   AnsiOutputDisplay,
   Config,
-} from '@qwen-code/qwen-code-core';
+} from '@urlyn-code/urlyn-code-core';
 import type { LoadedSettings } from '../../../config/settings.js';
 
 vi.mock('../TerminalOutput.js', () => ({

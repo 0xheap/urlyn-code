@@ -7,7 +7,7 @@
 import { useEffect, useRef, useCallback } from 'react';
 import { useVSCode } from './useVSCode.js';
 import type { Conversation } from '../../services/conversationStore.js';
-import type { PermissionOption, PermissionToolCall } from '@qwen-code/webui';
+import type { PermissionOption, PermissionToolCall } from '@urlyn-code/webui';
 import type {
   ToolCallUpdate,
   UsageStatsPayload,
@@ -924,7 +924,7 @@ export const useWebViewMessages = ({
           // Reset the VS Code tab title to default label
           vscode.postMessage({
             type: 'updatePanelTitle',
-            data: { title: 'Qwen Code' },
+            data: { title: 'Urlyn Code' },
           });
           lastPlanSnapshotRef.current = null;
           break;

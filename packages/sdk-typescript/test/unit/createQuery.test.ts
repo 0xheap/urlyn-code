@@ -66,7 +66,7 @@ describe('query()', () => {
       options: {
         systemPrompt: {
           type: 'preset',
-          preset: 'qwen_code',
+          preset: 'urlyn_code',
           append: 'Be terse.',
         },
       } satisfies QueryOptions,

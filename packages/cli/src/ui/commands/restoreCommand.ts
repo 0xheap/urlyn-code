@@ -12,7 +12,7 @@ import {
   type SlashCommandActionReturn,
   CommandKind,
 } from './types.js';
-import type { Config } from '@qwen-code/qwen-code-core';
+import type { Config } from '@urlyn-code/urlyn-code-core';
 import { t } from '../../i18n/index.js';
 
 async function restoreAction(

@@ -1,12 +1,12 @@
 /**
  * @license
- * Copyright 2025 Qwen Code
+ * Copyright 2025 Urlyn Code
  * SPDX-License-Identifier: Apache-2.0
  */
 
 import { useState } from 'react';
 import { render, Box, useApp } from 'ink';
-import { getGitBranch, SessionService } from '@qwen-code/qwen-code-core';
+import { getGitBranch, SessionService } from '@urlyn-code/urlyn-code-core';
 import { KeypressProvider } from '../contexts/KeypressContext.js';
 import { SessionPicker } from './SessionPicker.js';
 import { writeStdoutLine } from '../../utils/stdioHelpers.js';

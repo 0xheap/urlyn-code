@@ -1022,7 +1022,7 @@ export class ArenaManager {
     // Construct env vars for the agent
     const arenaSessionDir = this.getArenaSessionDir();
     const env: Record<string, string> = {
-      QWEN_CODE: '1',
+      URLYN_CODE: '1',
       ARENA_AGENT_ID: agentId,
       ARENA_SESSION_ID: this.arenaConfig?.sessionId ?? '',
       ARENA_SESSION_DIR: arenaSessionDir,

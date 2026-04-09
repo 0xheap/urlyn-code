@@ -12,7 +12,7 @@ import {
   AuthType,
   type ContentGeneratorConfig,
   type Config,
-} from '@qwen-code/qwen-code-core';
+} from '@urlyn-code/urlyn-code-core';
 
 // Helper function to create a mock config
 function createMockConfig(

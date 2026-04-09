@@ -15,17 +15,17 @@ import {
 
 type Logger = (message: string) => void;
 
-export const runQwenCodeCommand = 'qwen-code.runQwenCode';
+export const runUrlynCodeCommand = 'urlyn-code.runUrlynCode';
 export const showDiffCommand = 'qwenCode.showDiff';
-export const openChatCommand = 'qwen-code.openChat';
+export const openChatCommand = 'urlyn-code.openChat';
 export const openNewChatTabCommand = 'qwenCode.openNewChatTab';
-export const loginCommand = 'qwen-code.login';
-export const focusChatCommand = 'qwen-code.focusChat';
-export const newConversationCommand = 'qwen-code.newConversation';
-export const showLogsCommand = 'qwen-code.showLogs';
+export const loginCommand = 'urlyn-code.login';
+export const focusChatCommand = 'urlyn-code.focusChat';
+export const newConversationCommand = 'urlyn-code.newConversation';
+export const showLogsCommand = 'urlyn-code.showLogs';
 
 /**
- * Register all Qwen Code chat-related commands.
+ * Register all Urlyn Code chat-related commands.
  *
  * `openChat` and `newConversation` always open an editor tab, while
  * `focusChat` focuses the secondary sidebar (preferred) or primary sidebar.
@@ -107,7 +107,7 @@ export function registerNewCommands(
         await providers[providers.length - 1].forceReLogin();
       } else {
         vscode.window.showInformationMessage(
-          'Please open Qwen Code chat first before logging in.',
+          'Please open Urlyn Code chat first before logging in.',
         );
       }
     }),
@@ -140,7 +140,7 @@ export function registerNewCommands(
         outputChannel.show(true);
       } else {
         vscode.window.showWarningMessage(
-          'Qwen Code Companion log channel is not available.',
+          'Urlyn Code Companion log channel is not available.',
         );
       }
     }),

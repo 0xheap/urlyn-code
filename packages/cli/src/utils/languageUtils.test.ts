@@ -34,8 +34,8 @@ vi.mock('../i18n/index.js', () => ({
   }),
 }));
 
-// Mock @qwen-code/qwen-code-core
-vi.mock('@qwen-code/qwen-code-core', () => ({
+// Mock @urlyn-code/urlyn-code-core
+vi.mock('@urlyn-code/urlyn-code-core', () => ({
   Storage: {
     getGlobalQwenDir: vi.fn(() => '/mock/home/.qwen'),
   },
@@ -202,7 +202,7 @@ describe('languageUtils', () => {
 
       const writtenContent = vi.mocked(fs.writeFileSync).mock.calls[0][1];
       expect(writtenContent).toContain(
-        '<!-- qwen-code:llm-output-language: Chinese -->',
+        '<!-- urlyn-code:llm-output-language: Chinese -->',
       );
     });
 
@@ -215,7 +215,7 @@ describe('languageUtils', () => {
         '# Output language preference: Test--Language',
       );
       expect(writtenContent).toContain(
-        '<!-- qwen-code:llm-output-language: TestLanguage -->',
+        '<!-- urlyn-code:llm-output-language: TestLanguage -->',
       );
     });
 
@@ -314,7 +314,7 @@ describe('languageUtils', () => {
       vi.mocked(i18n.detectSystemLanguage).mockReturnValue('en');
       vi.mocked(fs.readFileSync).mockReturnValue(
         `# Output language preference: French
-<!-- qwen-code:llm-output-language: French -->
+<!-- urlyn-code:llm-output-language: French -->
 `,
       );
 
@@ -327,7 +327,7 @@ describe('languageUtils', () => {
       vi.mocked(fs.existsSync).mockReturnValue(true);
       vi.mocked(fs.readFileSync).mockReturnValue(
         `# Output language preference: French
-<!-- qwen-code:llm-output-language: French -->
+<!-- urlyn-code:llm-output-language: French -->
 `,
       );
 

@@ -5,10 +5,10 @@
  *
  * Prompt Suggestion Subpath Entry
  *
- * Separated from the root entry to avoid forcing all @qwen-code/webui
- * consumers to install @qwen-code/qwen-code-core as a dependency.
+ * Separated from the root entry to avoid forcing all @urlyn-code/webui
+ * consumers to install @urlyn-code/urlyn-code-core as a dependency.
  *
- * Usage: import { useFollowupSuggestions } from '@qwen-code/webui/followup';
+ * Usage: import { useFollowupSuggestions } from '@urlyn-code/webui/followup';
  */
 
 export { useFollowupSuggestions } from './hooks/useFollowupSuggestions';

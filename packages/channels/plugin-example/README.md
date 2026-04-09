@@ -1,6 +1,6 @@
-# @qwen-code/channel-plugin-example
+# @urlyn-code/channel-plugin-example
 
-A reference channel plugin for Qwen Code. It connects to a WebSocket server and routes messages through the full channel pipeline (access control, session routing, agent bridge).
+A reference channel plugin for Urlyn Code. It connects to a WebSocket server and routes messages through the full channel pipeline (access control, session routing, agent bridge).
 
 Use this package to:
 
@@ -12,15 +12,15 @@ Use this package to:
 ### 1. Install the package
 
 ```bash
-npm install @qwen-code/channel-plugin-example
+npm install @urlyn-code/channel-plugin-example
 ```
 
-### 2. Link it as a Qwen Code extension
+### 2. Link it as a Urlyn Code extension
 
 The package ships a `qwen-extension.json` manifest, so it works as an extension out of the box:
 
 ```bash
-qwen extensions link ./node_modules/@qwen-code/channel-plugin-example
+qwen extensions link ./node_modules/@urlyn-code/channel-plugin-example
 ```
 
 ### 3. Configure the channel
@@ -79,7 +79,7 @@ Mock Server (HTTP + WS)
 MockPluginChannel (this package)
   → Envelope → ChannelBase.handleInbound()
     → SenderGate → SessionRouter → AcpBridge.prompt()
-      → qwen-code agent → model API
+      → urlyn-code agent → model API
     ← response
   ← sendMessage() → WebSocket → Mock Server
   ← HTTP response

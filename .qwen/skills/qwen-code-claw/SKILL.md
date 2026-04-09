@@ -1,9 +1,9 @@
 ---
-name: qwen-code-claw
-description: Use Qwen Code as a Code Agent for code understanding, project generation, features, bug fixes, refactoring, and various programming tasks
+name: urlyn-code-claw
+description: Use Urlyn Code as a Code Agent for code understanding, project generation, features, bug fixes, refactoring, and various programming tasks
 ---
 
-# Qwen Code Claw
+# Urlyn Code Claw
 
 ## When to Use This Skill
 
@@ -19,7 +19,7 @@ Use this skill when you need to:
 ## Install
 
 ```bash
-npm install -g @qwen-code/qwen-code
+npm install -g @urlyn-code/urlyn-code
 ```
 
 For normal session reuse, prefer a global install over `npx`.
@@ -50,11 +50,11 @@ qwen auth coding-plan --region china --key $BAILIAN_CODING_PLAN_API_KEY
 qwen auth
 ```
 
-Or configure custom API after launching Qwen Code via `/auth`.
+Or configure custom API after launching Urlyn Code via `/auth`.
 
 ## ACPX Integration
 
-You should always use `acpx` to run Qwen Code over the Agent Client Protocol (ACP) instead of scraping PTY sessions.
+You should always use `acpx` to run Urlyn Code over the Agent Client Protocol (ACP) instead of scraping PTY sessions.
 
 To use acpx:
 
@@ -82,7 +82,7 @@ To use acpx:
 4. **For complete CLI reference with all options and examples**:
    https://raw.githubusercontent.com/openclaw/acpx/main/docs/CLI.md
 
-From now on, when you need to delegate work to Qwen Code, use `acpx` instead of spawning raw terminal sessions. For example:
+From now on, when you need to delegate work to Urlyn Code, use `acpx` instead of spawning raw terminal sessions. For example:
 
 ```bash
 npx acpx@latest qwen "fix the failing tests"
@@ -150,7 +150,7 @@ If every permission request is denied/cancelled and none are approved, `acpx` ex
 4. Use `--format json` for automation and script integration
 5. Use `--cwd` to manage context across multiple projects
 
-## QwenCode Reference
+## UrlynCode Reference
 
 ### CLI Commands
 
@@ -161,9 +161,9 @@ If every permission request is denied/cancelled and none are approved, `acpx` ex
 | `/compress` | Compress history to save tokens |
 | `/stats`    | Show session info               |
 | `/auth`     | Configure authentication        |
-| `/exit`     | Exit Qwen Code                  |
+| `/exit`     | Exit Urlyn Code                 |
 
-Full reference: https://raw.githubusercontent.com/QwenLM/qwen-code/refs/heads/main/docs/users/features/commands.md
+Full reference: https://raw.githubusercontent.com/QwenLM/urlyn-code/refs/heads/main/docs/users/features/commands.md
 
 ### Configuration
 
@@ -178,30 +178,30 @@ Key settings:
 | `permissions.allow/ask/deny` | Tool permission rules                     |
 | `mcpServers.*`               | MCP server configurations                 |
 
-Full reference: https://raw.githubusercontent.com/QwenLM/qwen-code/refs/heads/main/docs/users/configuration/settings.md
+Full reference: https://raw.githubusercontent.com/QwenLM/urlyn-code/refs/heads/main/docs/users/configuration/settings.md
 
 ### Authentication
 
 Supports Qwen OAuth (browser-based, 1000 free requests/day) and OpenAI-compatible API keys.
 
-Full reference: https://raw.githubusercontent.com/QwenLM/qwen-code/refs/heads/main/docs/users/configuration/auth.md
+Full reference: https://raw.githubusercontent.com/QwenLM/urlyn-code/refs/heads/main/docs/users/configuration/auth.md
 
 ### Model Providers
 
 Configure custom model providers via `modelProviders` in settings or environment variables (`OPENAI_API_KEY`, `OPENAI_BASE_URL`, `OPENAI_MODEL`).
 
-Full reference: https://raw.githubusercontent.com/QwenLM/qwen-code/refs/heads/main/docs/users/configuration/model-providers.md
+Full reference: https://raw.githubusercontent.com/QwenLM/urlyn-code/refs/heads/main/docs/users/configuration/model-providers.md
 
 ### Key Features
 
-| Feature       | Description                               | Docs                                                                                                    |
-| ------------- | ----------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| Approval Mode | Control tool execution permissions        | https://raw.githubusercontent.com/QwenLM/qwen-code/refs/heads/main/docs/users/features/approval-mode.md |
-| MCP           | Model Context Protocol server integration | https://raw.githubusercontent.com/QwenLM/qwen-code/refs/heads/main/docs/users/features/mcp.md           |
-| Skills        | Reusable skill system via `/skill`        | https://raw.githubusercontent.com/QwenLM/qwen-code/refs/heads/main/docs/users/features/skills.md        |
-| Sub-agents    | Delegate tasks to specialized agents      | https://raw.githubusercontent.com/QwenLM/qwen-code/refs/heads/main/docs/users/features/sub-agents.md    |
-| Sandbox       | Secure code execution environment         | https://raw.githubusercontent.com/QwenLM/qwen-code/refs/heads/main/docs/users/features/sandbox.md       |
-| Headless      | Non-interactive / CI mode                 | https://raw.githubusercontent.com/QwenLM/qwen-code/refs/heads/main/docs/users/features/headless.md      |
+| Feature       | Description                               | Docs                                                                                                     |
+| ------------- | ----------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| Approval Mode | Control tool execution permissions        | https://raw.githubusercontent.com/QwenLM/urlyn-code/refs/heads/main/docs/users/features/approval-mode.md |
+| MCP           | Model Context Protocol server integration | https://raw.githubusercontent.com/QwenLM/urlyn-code/refs/heads/main/docs/users/features/mcp.md           |
+| Skills        | Reusable skill system via `/skill`        | https://raw.githubusercontent.com/QwenLM/urlyn-code/refs/heads/main/docs/users/features/skills.md        |
+| Sub-agents    | Delegate tasks to specialized agents      | https://raw.githubusercontent.com/QwenLM/urlyn-code/refs/heads/main/docs/users/features/sub-agents.md    |
+| Sandbox       | Secure code execution environment         | https://raw.githubusercontent.com/QwenLM/urlyn-code/refs/heads/main/docs/users/features/sandbox.md       |
+| Headless      | Non-interactive / CI mode                 | https://raw.githubusercontent.com/QwenLM/urlyn-code/refs/heads/main/docs/users/features/headless.md      |
 
 ## ACPX Reference
 

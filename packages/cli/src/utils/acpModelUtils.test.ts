@@ -5,7 +5,7 @@
  */
 
 import { describe, it, expect } from 'vitest';
-import { AuthType } from '@qwen-code/qwen-code-core';
+import { AuthType } from '@urlyn-code/urlyn-code-core';
 import {
   formatAcpModelId,
   parseAcpBaseModelId,

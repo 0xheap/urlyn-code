@@ -26,7 +26,7 @@ vi.mock('./utils.js', () => ({
   }),
 }));
 
-vi.mock('@qwen-code/qwen-code-core', () => ({
+vi.mock('@urlyn-code/urlyn-code-core', () => ({
   ExtensionSettingScope: {
     USER: 'user',
     WORKSPACE: 'workspace',

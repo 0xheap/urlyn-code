@@ -4,7 +4,7 @@ import type {
   ExtensionRequestOptions,
   SkillConfig,
   SubagentConfig,
-} from '@qwen-code/qwen-code-core';
+} from '@urlyn-code/urlyn-code-core';
 import type { ConfirmationRequest } from '../../ui/types.js';
 import chalk from 'chalk';
 import prompts from 'prompts';
@@ -149,13 +149,13 @@ export function extensionConsentString(
   commands: string[] = [],
   skills: SkillConfig[] = [],
   subagents: SubagentConfig[] = [],
-  originSource: string = 'QwenCode',
+  originSource: string = 'UrlynCode',
 ): string {
   const output: string[] = [];
-  if (originSource !== 'QwenCode') {
+  if (originSource !== 'UrlynCode') {
     output.push(
       t(
-        'You are installing an extension from {{originSource}}. Some features may not work perfectly with Qwen Code.',
+        'You are installing an extension from {{originSource}}. Some features may not work perfectly with Urlyn Code.',
         { originSource },
       ),
     );
@@ -231,7 +231,7 @@ export const requestConsentOrFail = async (
   if (!options) return;
   const {
     extensionConfig,
-    originSource = 'QwenCode',
+    originSource = 'UrlynCode',
     commands = [],
     skills = [],
     subagents = [],

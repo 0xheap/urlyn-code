@@ -16,7 +16,7 @@ import {
   ExtensionManager,
   parseInstallSource,
   createDebugLogger,
-} from '@qwen-code/qwen-code-core';
+} from '@urlyn-code/urlyn-code-core';
 import open from 'open';
 
 const debugLogger = createDebugLogger('EXTENSIONS_COMMAND');

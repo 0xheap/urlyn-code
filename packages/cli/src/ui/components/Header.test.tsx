@@ -15,7 +15,7 @@ const useTerminalSizeMock = vi.mocked(useTerminalSize.useTerminalSize);
 const defaultProps = {
   version: '1.0.0',
   authDisplayType: AuthDisplayType.QWEN_OAUTH,
-  model: 'qwen-coder-plus',
+  model: 'urlyn-coder-plus',
   workingDirectory: '/home/user/projects/test',
 };
 
@@ -44,7 +44,7 @@ describe('<Header />', () => {
   it('displays auth type and model', () => {
     const { lastFrame } = render(<Header {...defaultProps} />);
     expect(lastFrame()).toContain('Qwen OAuth');
-    expect(lastFrame()).toContain('qwen-coder-plus');
+    expect(lastFrame()).toContain('urlyn-coder-plus');
   });
 
   it('displays Coding Plan auth type', () => {

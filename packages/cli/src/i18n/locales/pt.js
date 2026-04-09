@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-// Portuguese translations for Qwen Code CLI (pt-BR)
+// Portuguese translations for Urlyn Code CLI (pt-BR)
 
 export default {
   // ============================================================================
@@ -75,16 +75,16 @@ export default {
   'For a full list of shortcuts, see {{docPath}}':
     'Para uma lista completa de atalhos, consulte {{docPath}}',
   'docs/keyboard-shortcuts.md': 'docs/keyboard-shortcuts.md',
-  'for help on Qwen Code': 'para ajuda sobre o Qwen Code',
+  'for help on Urlyn Code': 'para ajuda sobre o Urlyn Code',
   'show version info': 'mostrar informações de versão',
   'submit a bug report': 'enviar um relatório de erro',
-  'About Qwen Code': 'Sobre o Qwen Code',
+  'About Urlyn Code': 'Sobre o Urlyn Code',
   Status: 'Status',
 
   // ============================================================================
   // System Information Fields
   // ============================================================================
-  'Qwen Code': 'Qwen Code',
+  'Urlyn Code': 'Urlyn Code',
   Runtime: 'Runtime',
   OS: 'SO',
   Auth: 'Autenticação',
@@ -110,10 +110,11 @@ export default {
   // ============================================================================
   'Analyzes the project and creates a tailored QWEN.md file.':
     'Analisa o projeto e cria um arquivo QWEN.md personalizado.',
-  'List available Qwen Code tools. Usage: /tools [desc]':
-    'Listar ferramentas Qwen Code disponíveis. Uso: /tools [desc]',
+  'List available Urlyn Code tools. Usage: /tools [desc]':
+    'Listar ferramentas Urlyn Code disponíveis. Uso: /tools [desc]',
   'List available skills.': 'Listar habilidades disponíveis.',
-  'Available Qwen Code CLI tools:': 'Ferramentas CLI do Qwen Code disponíveis:',
+  'Available Urlyn Code CLI tools:':
+    'Ferramentas CLI do Urlyn Code disponíveis:',
   'No tools available': 'Nenhuma ferramenta disponível',
   'View or change the approval mode for tool usage':
     'Ver ou alterar o modo de aprovação para uso de ferramentas',
@@ -139,8 +140,8 @@ export default {
     'Limpar histórico de conversa e liberar contexto',
   'Compresses the context by replacing it with a summary.':
     'Comprime o contexto substituindo-o por um resumo.',
-  'open full Qwen Code documentation in your browser':
-    'abrir documentação completa do Qwen Code no seu navegador',
+  'open full Urlyn Code documentation in your browser':
+    'abrir documentação completa do Urlyn Code no seu navegador',
   'Configuration not available.': 'Configuração não disponível.',
   'change the auth method': 'alterar o método de autenticação',
   'Configure authentication information for login':
@@ -234,7 +235,8 @@ export default {
   'Step {{n}}: Choose Location': 'Etapa {{n}}: Escolher Localização',
   'Step {{n}}: Choose Generation Method':
     'Etapa {{n}}: Escolher Método de Geração',
-  'Generate with Qwen Code (Recommended)': 'Gerar com Qwen Code (Recomendado)',
+  'Generate with Urlyn Code (Recommended)':
+    'Gerar com Urlyn Code (Recomendado)',
   'Manual Creation': 'Criação Manual',
   'Describe what this subagent should do and when it should be used. (Be comprehensive for best results)':
     'Descreva o que este subagente deve fazer e quando deve ser usado. (Seja abrangente para melhores resultados)',
@@ -299,10 +301,11 @@ export default {
   // ============================================================================
   // Commands - General (continued)
   // ============================================================================
-  'View and edit Qwen Code settings': 'Ver e editar configurações do Qwen Code',
+  'View and edit Urlyn Code settings':
+    'Ver e editar configurações do Urlyn Code',
   Settings: 'Configurações',
-  'To see changes, Qwen Code must be restarted. Press r to exit and apply changes now.':
-    'Para ver as alterações, o Qwen Code deve ser reiniciado. Pressione r para sair e aplicar as alterações agora.',
+  'To see changes, Urlyn Code must be restarted. Press r to exit and apply changes now.':
+    'Para ver as alterações, o Urlyn Code deve ser reiniciado. Pressione r para sair e aplicar as alterações agora.',
   'The command "/{{command}}" is not supported in non-interactive mode.':
     'O comando "/{{command}}" não é suportado no modo não interativo.',
 
@@ -461,8 +464,8 @@ export default {
     'Esta extensão instalará os seguintes subagentes:',
   'Installation cancelled for "{{name}}".':
     'Instalação cancelada para "{{name}}".',
-  'You are installing an extension from {{originSource}}. Some features may not work perfectly with Qwen Code.':
-    'Você está instalando uma extensão de {{originSource}}. Alguns recursos podem não funcionar perfeitamente com o Qwen Code.',
+  'You are installing an extension from {{originSource}}. Some features may not work perfectly with Urlyn Code.':
+    'Você está instalando uma extensão de {{originSource}}. Alguns recursos podem não funcionar perfeitamente com o Urlyn Code.',
   '--ref and --auto-update are not applicable for marketplace extensions.':
     '--ref e --auto-update não são aplicáveis para extensões de marketplace.',
   'Extension "{{name}}" installed successfully and enabled.':
@@ -561,8 +564,8 @@ export default {
     'instalar companion IDE necessário para {{ideName}}',
   'enable IDE integration': 'ativar integração com IDE',
   'disable IDE integration': 'desativar integração com IDE',
-  'IDE integration is not supported in your current environment. To use this feature, run Qwen Code in one of these supported IDEs: VS Code or VS Code forks.':
-    'A integração com IDE não é suportada no seu ambiente atual. Para usar este recurso, execute o Qwen Code em um destes IDEs suportados: VS Code ou forks do VS Code.',
+  'IDE integration is not supported in your current environment. To use this feature, run Urlyn Code in one of these supported IDEs: VS Code or VS Code forks.':
+    'A integração com IDE não é suportada no seu ambiente atual. Para usar este recurso, execute o Urlyn Code em um destes IDEs suportados: VS Code ou forks do VS Code.',
   'Set up GitHub Actions': 'Configurar GitHub Actions',
   'Configure terminal keybindings for multiline input (VS Code, Cursor, Windsurf, Trae)':
     'Configurar atalhos de terminal para entrada multilinhas (VS Code, Cursor, Windsurf, Trae)',
@@ -596,7 +599,7 @@ export default {
   // ============================================================================
   // Commands - Hooks
   // ============================================================================
-  'Manage Qwen Code hooks': 'Gerenciar hooks do Qwen Code',
+  'Manage Urlyn Code hooks': 'Gerenciar hooks do Urlyn Code',
   'List all configured hooks': 'Listar todos os hooks configurados',
   'Enable a disabled hook': 'Ativar um hook desativado',
   'Disable an active hook': 'Desativar um hook ativo',
@@ -614,8 +617,8 @@ export default {
   'No hook events found.': 'Nenhum evento de hook encontrado.',
   '{{count}} hook configured': '{{count}} hook configurado',
   '{{count}} hooks configured': '{{count}} hooks configurados',
-  'This menu is read-only. To add or modify hooks, edit settings.json directly or ask Qwen Code.':
-    'Este menu é somente leitura. Para adicionar ou modificar hooks, edite settings.json diretamente ou pergunte ao Qwen Code.',
+  'This menu is read-only. To add or modify hooks, edit settings.json directly or ask Urlyn Code.':
+    'Este menu é somente leitura. Para adicionar ou modificar hooks, edite settings.json diretamente ou pergunte ao Urlyn Code.',
   'Enter to select · Esc to cancel':
     'Enter para selecionar · Esc para cancelar',
   // Hooks - Detail Step
@@ -645,8 +648,8 @@ export default {
   'StatusLine will not be displayed': 'StatusLine não será exibido',
   'Tool operations will proceed without hook validation':
     'As operações de ferramentas prosseguirão sem validação de hook',
-  'To re-enable hooks, remove "disableAllHooks" from settings.json or ask Qwen Code.':
-    'Para reativar os hooks, remova "disableAllHooks" do settings.json ou pergunte ao Qwen Code.',
+  'To re-enable hooks, remove "disableAllHooks" from settings.json or ask Urlyn Code.':
+    'Para reativar os hooks, remova "disableAllHooks" do settings.json ou pergunte ao Urlyn Code.',
   // Hooks - Source
   Project: 'Projeto',
   User: 'Usuário',
@@ -666,8 +669,8 @@ export default {
   'When notifications are sent': 'Quando notificações são enviadas',
   'When the user submits a prompt': 'Quando o usuário envia um prompt',
   'When a new session is started': 'Quando uma nova sessão é iniciada',
-  'Right before Qwen Code concludes its response':
-    'Logo antes do Qwen Code concluir sua resposta',
+  'Right before Urlyn Code concludes its response':
+    'Logo antes do Urlyn Code concluir sua resposta',
   'When a subagent (Agent tool call) is started':
     'Quando um subagente (chamada de ferramenta Agent) é iniciado',
   'Right before a subagent concludes its response':
@@ -1361,12 +1364,12 @@ export default {
   Ask: 'Perguntar',
   Deny: 'Negar',
   Workspace: 'Área de trabalho',
-  "Qwen Code won't ask before using allowed tools.":
-    'O Qwen Code não perguntará antes de usar ferramentas permitidas.',
-  'Qwen Code will ask before using these tools.':
-    'O Qwen Code perguntará antes de usar essas ferramentas.',
-  'Qwen Code is not allowed to use denied tools.':
-    'O Qwen Code não tem permissão para usar ferramentas negadas.',
+  "Urlyn Code won't ask before using allowed tools.":
+    'O Urlyn Code não perguntará antes de usar ferramentas permitidas.',
+  'Urlyn Code will ask before using these tools.':
+    'O Urlyn Code perguntará antes de usar essas ferramentas.',
+  'Urlyn Code is not allowed to use denied tools.':
+    'O Urlyn Code não tem permissão para usar ferramentas negadas.',
   'Manage trusted directories for this workspace.':
     'Gerenciar diretórios confiáveis para esta área de trabalho.',
   'Any use of the {{tool}} tool': 'Qualquer uso da ferramenta {{tool}}',
@@ -1405,10 +1408,10 @@ export default {
   // Workspace directory management
   'Add directory…': 'Adicionar diretório…',
   'Add directory to workspace': 'Adicionar diretório à área de trabalho',
-  'Qwen Code can read files in the workspace, and make edits when auto-accept edits is on.':
-    'O Qwen Code pode ler arquivos na área de trabalho e fazer edições quando a aceitação automática está ativada.',
-  'Qwen Code will be able to read files in this directory and make edits when auto-accept edits is on.':
-    'O Qwen Code poderá ler arquivos neste diretório e fazer edições quando a aceitação automática está ativada.',
+  'Urlyn Code can read files in the workspace, and make edits when auto-accept edits is on.':
+    'O Urlyn Code pode ler arquivos na área de trabalho e fazer edições quando a aceitação automática está ativada.',
+  'Urlyn Code will be able to read files in this directory and make edits when auto-accept edits is on.':
+    'O Urlyn Code poderá ler arquivos neste diretório e fazer edições quando a aceitação automática está ativada.',
   'Enter the path to the directory:': 'Insira o caminho do diretório:',
   'Enter directory path…': 'Insira o caminho do diretório…',
   'Tab to complete · Enter to add · Esc to cancel':
@@ -1499,8 +1502,8 @@ export default {
     'Use /bug para enviar problemas aos mantenedores quando algo der errado.',
   'Switch auth type quickly with /auth.':
     'Troque o tipo de autenticação rapidamente com /auth.',
-  'You can run any shell commands from Qwen Code using ! (e.g. !ls).':
-    'Você pode executar quaisquer comandos shell do Qwen Code usando ! (ex: !ls).',
+  'You can run any shell commands from Urlyn Code using ! (e.g. !ls).':
+    'Você pode executar quaisquer comandos shell do Urlyn Code usando ! (ex: !ls).',
   'Type / to open the command popup; Tab autocompletes slash commands and saved prompts.':
     'Digite / para abrir o popup de comandos; Tab autocompleta comandos de barra e prompts salvos.',
   'You can resume a previous conversation by running qwen --continue or qwen --resume.':

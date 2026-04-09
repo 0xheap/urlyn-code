@@ -1,7 +1,7 @@
-import type { ChannelPlugin } from '@qwen-code/channel-base';
-import { plugin as telegramPlugin } from '@qwen-code/channel-telegram';
-import { plugin as weixinPlugin } from '@qwen-code/channel-weixin';
-import { plugin as dingtalkPlugin } from '@qwen-code/channel-dingtalk';
+import type { ChannelPlugin } from '@urlyn-code/channel-base';
+import { plugin as telegramPlugin } from '@urlyn-code/channel-telegram';
+import { plugin as weixinPlugin } from '@urlyn-code/channel-weixin';
+import { plugin as dingtalkPlugin } from '@urlyn-code/channel-dingtalk';
 
 const registry = new Map<string, ChannelPlugin>();
 

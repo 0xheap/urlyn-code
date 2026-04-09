@@ -87,7 +87,7 @@ function setupAcpCronTest(rig: TestRig) {
       stdio: ['pipe', 'pipe', 'pipe'],
       env: {
         ...process.env,
-        QWEN_CODE_ENABLE_CRON: '1',
+        URLYN_CODE_ENABLE_CRON: '1',
       },
     },
   );

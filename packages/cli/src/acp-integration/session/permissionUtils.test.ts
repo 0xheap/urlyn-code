@@ -5,7 +5,7 @@
  */
 
 import { describe, expect, it } from 'vitest';
-import { ToolConfirmationOutcome } from '@qwen-code/qwen-code-core';
+import { ToolConfirmationOutcome } from '@urlyn-code/urlyn-code-core';
 import { toPermissionOptions } from './permissionUtils.js';
 
 describe('permissionUtils', () => {

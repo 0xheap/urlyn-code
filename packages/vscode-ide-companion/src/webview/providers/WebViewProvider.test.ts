@@ -22,7 +22,7 @@ const {
   mockOnDidChangeTextEditorSelection: vi.fn(() => ({ dispose: vi.fn() })),
 }));
 
-vi.mock('@qwen-code/qwen-code-core', () => ({
+vi.mock('@urlyn-code/urlyn-code-core', () => ({
   Storage: {
     getGlobalTempDir: mockGetGlobalTempDir,
   },
@@ -191,7 +191,7 @@ describe('WebViewProvider.attachToView', () => {
         onDidChangeVisibility: vi.fn(() => ({ dispose: vi.fn() })),
         onDidDispose: vi.fn(() => ({ dispose: vi.fn() })),
       } as never,
-      'qwen-code.chatView.sidebar',
+      'urlyn-code.chatView.sidebar',
     );
 
     const roots = (
@@ -275,7 +275,7 @@ describe('WebViewProvider.attachToView', () => {
         onDidChangeVisibility: vi.fn(() => ({ dispose: vi.fn() })),
         onDidDispose: vi.fn(() => ({ dispose: vi.fn() })),
       } as never,
-      'qwen-code.chatView.sidebar',
+      'urlyn-code.chatView.sidebar',
     );
 
     await messageHandler?.({

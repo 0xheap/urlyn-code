@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-// Русский перевод для Qwen Code CLI
+// Русский перевод для Urlyn Code CLI
 // Ключ служит одновременно ключом перевода и текстом по умолчанию
 
 export default {
@@ -70,10 +70,10 @@ export default {
   'For a full list of shortcuts, see {{docPath}}':
     'Полный список горячих клавиш см. в {{docPath}}',
   'docs/keyboard-shortcuts.md': 'docs/keyboard-shortcuts.md',
-  'for help on Qwen Code': 'Справка по Qwen Code',
+  'for help on Urlyn Code': 'Справка по Urlyn Code',
   'show version info': 'Просмотр информации о версии',
   'submit a bug report': 'Отправка отчёта об ошибке',
-  'About Qwen Code': 'Об Qwen Code',
+  'About Urlyn Code': 'Об Urlyn Code',
   Status: 'Статус',
 
   // Keyboard shortcuts panel descriptions
@@ -92,7 +92,7 @@ export default {
   // ============================================================================
   // Поля системной информации
   // ============================================================================
-  'Qwen Code': 'Qwen Code',
+  'Urlyn Code': 'Urlyn Code',
   Runtime: 'Среда выполнения',
   OS: 'ОС',
   Auth: 'Аутентификация',
@@ -118,10 +118,10 @@ export default {
   // ============================================================================
   'Analyzes the project and creates a tailored QWEN.md file.':
     'Анализ проекта и создание адаптированного файла QWEN.md',
-  'List available Qwen Code tools. Usage: /tools [desc]':
-    'Просмотр доступных инструментов Qwen Code. Использование: /tools [desc]',
+  'List available Urlyn Code tools. Usage: /tools [desc]':
+    'Просмотр доступных инструментов Urlyn Code. Использование: /tools [desc]',
   'List available skills.': 'Показать доступные навыки.',
-  'Available Qwen Code CLI tools:': 'Доступные инструменты Qwen Code CLI:',
+  'Available Urlyn Code CLI tools:': 'Доступные инструменты Urlyn Code CLI:',
   'No tools available': 'Нет доступных инструментов',
   'View or change the approval mode for tool usage':
     'Просмотр или изменение режима подтверждения для использования инструментов',
@@ -147,8 +147,8 @@ export default {
     'Очистить историю диалога и освободить контекст',
   'Compresses the context by replacing it with a summary.':
     'Сжатие контекста заменой на краткую сводку',
-  'open full Qwen Code documentation in your browser':
-    'Открытие полной документации Qwen Code в браузере',
+  'open full Urlyn Code documentation in your browser':
+    'Открытие полной документации Urlyn Code в браузере',
   'Configuration not available.': 'Конфигурация недоступна.',
   'change the auth method': 'Изменение метода авторизации',
   'Configure authentication information for login':
@@ -237,8 +237,8 @@ export default {
   // Агенты - Шаги мастера создания
   'Step {{n}}: Choose Location': 'Шаг {{n}}: Выберите расположение',
   'Step {{n}}: Choose Generation Method': 'Шаг {{n}}: Выберите метод генерации',
-  'Generate with Qwen Code (Recommended)':
-    'Сгенерировать с помощью Qwen Code (Рекомендуется)',
+  'Generate with Urlyn Code (Recommended)':
+    'Сгенерировать с помощью Urlyn Code (Рекомендуется)',
   'Manual Creation': 'Ручное создание',
   'Describe what this subagent should do and when it should be used. (Be comprehensive for best results)':
     'Опишите, что должен делать этот подагент и когда его следует использовать. (Будьте подробны для лучших результатов)',
@@ -298,10 +298,11 @@ export default {
   // ============================================================================
   // Команды - Общие (продолжение)
   // ============================================================================
-  'View and edit Qwen Code settings': 'Просмотр и изменение настроек Qwen Code',
+  'View and edit Urlyn Code settings':
+    'Просмотр и изменение настроек Urlyn Code',
   Settings: 'Настройки',
-  'To see changes, Qwen Code must be restarted. Press r to exit and apply changes now.':
-    'Для применения изменений необходимо перезапустить Qwen Code. Нажмите r для выхода и применения изменений.',
+  'To see changes, Urlyn Code must be restarted. Press r to exit and apply changes now.':
+    'Для применения изменений необходимо перезапустить Urlyn Code. Нажмите r для выхода и применения изменений.',
   'The command "/{{command}}" is not supported in non-interactive mode.':
     'Команда "/{{command}}" не поддерживается в неинтерактивном режиме.',
   // ============================================================================
@@ -457,8 +458,8 @@ export default {
   'This extension will install the following subagents:':
     'Это расширение установит следующие подагенты:',
   'Installation cancelled for "{{name}}".': 'Установка "{{name}}" отменена.',
-  'You are installing an extension from {{originSource}}. Some features may not work perfectly with Qwen Code.':
-    'Вы устанавливаете расширение от {{originSource}}. Некоторые функции могут работать не идеально с Qwen Code.',
+  'You are installing an extension from {{originSource}}. Some features may not work perfectly with Urlyn Code.':
+    'Вы устанавливаете расширение от {{originSource}}. Некоторые функции могут работать не идеально с Urlyn Code.',
   '--ref and --auto-update are not applicable for marketplace extensions.':
     '--ref и --auto-update неприменимы для расширений из маркетплейса.',
   'Extension "{{name}}" installed successfully and enabled.':
@@ -567,8 +568,8 @@ export default {
     'Установить необходимый компаньон IDE для {{ideName}}',
   'enable IDE integration': 'Включение интеграции с IDE',
   'disable IDE integration': 'Отключение интеграции с IDE',
-  'IDE integration is not supported in your current environment. To use this feature, run Qwen Code in one of these supported IDEs: VS Code or VS Code forks.':
-    'Интеграция с IDE не поддерживается в вашем окружении. Для использования этой функции запустите Qwen Code в одной из поддерживаемых IDE: VS Code или форках VS Code.',
+  'IDE integration is not supported in your current environment. To use this feature, run Urlyn Code in one of these supported IDEs: VS Code or VS Code forks.':
+    'Интеграция с IDE не поддерживается в вашем окружении. Для использования этой функции запустите Urlyn Code в одной из поддерживаемых IDE: VS Code или форках VS Code.',
   'Set up GitHub Actions': 'Настройка GitHub Actions',
   'Configure terminal keybindings for multiline input (VS Code, Cursor, Windsurf, Trae)':
     'Настройка привязки клавиш терминала для многострочного ввода (VS Code, Cursor, Windsurf, Trae)',
@@ -602,7 +603,7 @@ export default {
   // ============================================================================
   // Commands - Hooks
   // ============================================================================
-  'Manage Qwen Code hooks': 'Управлять хуками Qwen Code',
+  'Manage Urlyn Code hooks': 'Управлять хуками Urlyn Code',
   'List all configured hooks': 'Показать все настроенные хуки',
   'Enable a disabled hook': 'Включить отключенный хук',
   'Disable an active hook': 'Отключить активный хук',
@@ -620,8 +621,8 @@ export default {
   'No hook events found.': 'События хуков не найдены.',
   '{{count}} hook configured': '{{count}} хук настроен',
   '{{count}} hooks configured': '{{count}} хуков настроено',
-  'This menu is read-only. To add or modify hooks, edit settings.json directly or ask Qwen Code.':
-    'Это меню только для чтения. Чтобы добавить или изменить хуки, отредактируйте settings.json напрямую или спросите Qwen Code.',
+  'This menu is read-only. To add or modify hooks, edit settings.json directly or ask Urlyn Code.':
+    'Это меню только для чтения. Чтобы добавить или изменить хуки, отредактируйте settings.json напрямую или спросите Urlyn Code.',
   'Enter to select · Esc to cancel': 'Enter для выбора · Esc для отмены',
   // Hooks - Detail Step
   'Exit codes:': 'Коды выхода:',
@@ -650,8 +651,8 @@ export default {
   'StatusLine will not be displayed': 'StatusLine не будет отображаться',
   'Tool operations will proceed without hook validation':
     'Операции инструментов будут выполняться без проверки хуков',
-  'To re-enable hooks, remove "disableAllHooks" from settings.json or ask Qwen Code.':
-    'Чтобы снова включить хуки, удалите "disableAllHooks" из settings.json или спросите Qwen Code.',
+  'To re-enable hooks, remove "disableAllHooks" from settings.json or ask Urlyn Code.':
+    'Чтобы снова включить хуки, удалите "disableAllHooks" из settings.json или спросите Urlyn Code.',
   // Hooks - Source
   Project: 'Проект',
   User: 'Пользователь',
@@ -671,8 +672,8 @@ export default {
   'When notifications are sent': 'При отправке уведомлений',
   'When the user submits a prompt': 'Когда пользователь отправляет промпт',
   'When a new session is started': 'При запуске новой сессии',
-  'Right before Qwen Code concludes its response':
-    'Непосредственно перед завершением ответа Qwen Code',
+  'Right before Urlyn Code concludes its response':
+    'Непосредственно перед завершением ответа Urlyn Code',
   'When a subagent (Agent tool call) is started':
     'При запуске субагента (вызов инструмента Agent)',
   'Right before a subagent concludes its response':
@@ -1283,12 +1284,12 @@ export default {
   Ask: 'Спросить',
   Deny: 'Запретить',
   Workspace: 'Рабочая область',
-  "Qwen Code won't ask before using allowed tools.":
-    'Qwen Code не будет спрашивать перед использованием разрешённых инструментов.',
-  'Qwen Code will ask before using these tools.':
-    'Qwen Code спросит перед использованием этих инструментов.',
-  'Qwen Code is not allowed to use denied tools.':
-    'Qwen Code не может использовать запрещённые инструменты.',
+  "Urlyn Code won't ask before using allowed tools.":
+    'Urlyn Code не будет спрашивать перед использованием разрешённых инструментов.',
+  'Urlyn Code will ask before using these tools.':
+    'Urlyn Code спросит перед использованием этих инструментов.',
+  'Urlyn Code is not allowed to use denied tools.':
+    'Urlyn Code не может использовать запрещённые инструменты.',
   'Manage trusted directories for this workspace.':
     'Управление доверенными каталогами для этой рабочей области.',
   'Any use of the {{tool}} tool': 'Любое использование инструмента {{tool}}',
@@ -1327,10 +1328,10 @@ export default {
   // Workspace directory management
   'Add directory…': 'Добавить каталог…',
   'Add directory to workspace': 'Добавить каталог в рабочую область',
-  'Qwen Code can read files in the workspace, and make edits when auto-accept edits is on.':
-    'Qwen Code может читать файлы в рабочей области и вносить правки, когда автоприём правок включён.',
-  'Qwen Code will be able to read files in this directory and make edits when auto-accept edits is on.':
-    'Qwen Code сможет читать файлы в этом каталоге и вносить правки, когда автоприём правок включён.',
+  'Urlyn Code can read files in the workspace, and make edits when auto-accept edits is on.':
+    'Urlyn Code может читать файлы в рабочей области и вносить правки, когда автоприём правок включён.',
+  'Urlyn Code will be able to read files in this directory and make edits when auto-accept edits is on.':
+    'Urlyn Code сможет читать файлы в этом каталоге и вносить правки, когда автоприём правок включён.',
   'Enter the path to the directory:': 'Введите путь к каталогу:',
   'Enter directory path…': 'Введите путь к каталогу…',
   'Tab to complete · Enter to add · Esc to cancel':
@@ -1416,8 +1417,8 @@ export default {
     '1. Задавайте вопросы, редактируйте файлы или выполняйте команды.',
   '2. Be specific for the best results.':
     '2. Будьте конкретны для лучших результатов.',
-  'files to customize your interactions with Qwen Code.':
-    'файлы для настройки взаимодействия с Qwen Code.',
+  'files to customize your interactions with Urlyn Code.':
+    'файлы для настройки взаимодействия с Urlyn Code.',
   'for more information.': 'для получения дополнительной информации.',
 
   // ============================================================================
@@ -1691,8 +1692,8 @@ export default {
     'Используйте /bug, чтобы сообщить о проблемах разработчикам.',
   'Switch auth type quickly with /auth.':
     'Быстро переключите тип аутентификации с помощью /auth.',
-  'You can run any shell commands from Qwen Code using ! (e.g. !ls).':
-    'Вы можете выполнять любые shell-команды в Qwen Code с помощью ! (например, !ls).',
+  'You can run any shell commands from Urlyn Code using ! (e.g. !ls).':
+    'Вы можете выполнять любые shell-команды в Urlyn Code с помощью ! (например, !ls).',
   'Type / to open the command popup; Tab autocompletes slash commands and saved prompts.':
     'Введите /, чтобы открыть меню команд; Tab автодополняет слэш-команды и сохранённые промпты.',
   'You can resume a previous conversation by running qwen --continue or qwen --resume.':

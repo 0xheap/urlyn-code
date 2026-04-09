@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 import path from 'node:path';
-import { Storage } from '@qwen-code/qwen-code-core';
+import { Storage } from '@urlyn-code/urlyn-code-core';
 import type { LoadedSettings } from '../config/settings.js';
 import { runWithAcpRuntimeOutputDir } from './runtimeOutputDirContext.js';
 

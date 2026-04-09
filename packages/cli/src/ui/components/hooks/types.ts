@@ -8,7 +8,7 @@ import type {
   HookConfig,
   HooksConfigSource,
   HookEventName,
-} from '@qwen-code/qwen-code-core';
+} from '@urlyn-code/urlyn-code-core';
 
 /**
  * Exit code description for hooks

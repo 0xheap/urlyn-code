@@ -1,6 +1,6 @@
 /**
  * @license
- * Copyright 2025 Qwen Code
+ * Copyright 2025 Urlyn Code
  * SPDX-License-Identifier: Apache-2.0
  */
 
@@ -11,10 +11,10 @@ import { SessionPicker } from './SessionPicker.js';
 import type {
   SessionListItem,
   ListSessionsResult,
-} from '@qwen-code/qwen-code-core';
+} from '@urlyn-code/urlyn-code-core';
 
-vi.mock('@qwen-code/qwen-code-core', async () => {
-  const actual = await vi.importActual('@qwen-code/qwen-code-core');
+vi.mock('@urlyn-code/urlyn-code-core', async () => {
+  const actual = await vi.importActual('@urlyn-code/urlyn-code-core');
   return {
     ...actual,
     getGitBranch: vi.fn().mockReturnValue('main'),

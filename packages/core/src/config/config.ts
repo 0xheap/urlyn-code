@@ -228,7 +228,7 @@ export interface GitCoAuthorSettings {
   email?: string;
 }
 
-export type ExtensionOriginSource = 'QwenCode' | 'Claude' | 'Gemini';
+export type ExtensionOriginSource = 'UrlynCode' | 'Claude' | 'Gemini';
 
 export interface ExtensionInstallMetadata {
   source: string;
@@ -664,8 +664,8 @@ export class Config {
     };
     this.gitCoAuthor = {
       enabled: params.gitCoAuthor ?? true,
-      name: 'Qwen-Coder',
-      email: 'qwen-coder@alibabacloud.com',
+      name: 'Urlyn-Coder',
+      email: 'urlyn-coder@alibabacloud.com',
     };
     this.usageStatisticsEnabled = params.usageStatisticsEnabled ?? true;
     this.outputLanguageFilePath = params.outputLanguageFilePath;
@@ -1704,7 +1704,7 @@ export class Config {
 
   isCronEnabled(): boolean {
     // Cron is experimental and opt-in: enabled via settings or env var
-    if (process.env['QWEN_CODE_ENABLE_CRON'] === '1') return true;
+    if (process.env['URLYN_CODE_ENABLE_CRON'] === '1') return true;
     return this.cronEnabled;
   }
 
